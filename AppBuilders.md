@@ -13,7 +13,8 @@
 **A very helpful guide I used: [wearenocode channel](https://www.youtube.com/@wearenocode)**
 
 * General Summary:
-> Almost all tools work the same way, choose a predefined template or start from zero and pick built in components to build you app, but they differ in their level of complexity, some are very limitted and some give us the option to write code manually, also not all tools are compatible with all platform (IOS, Android and Web).
+> Almost all tools work the same way, choose a predefined template or start from zero and pick built in components to build you app, but they differ in their level of complexity, some are very limitted and some give us the option to write code manually, also not all tools are compatible with all platform (IOS, Android and Web).\
+And they mostly differ in the way they implement the logic/flow of the app, for example thunkable allows us to connect logic exactly like puzzle pieces while in Bravo we first design the app on Figma and then add "Bravo tags" which allow us to add logic, most of the other tools allow us to simply add functionality to each component, if x then y, if we click this button then we perform this action, althought it has different complixity levels in differnet tools.
 
 * FlutterFlow:
 >My favorite, Works via drag and drop, getting more attention lately, uses flutter which is open source, connect to Firebase and GitHub,
