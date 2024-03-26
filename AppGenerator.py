@@ -1,31 +1,48 @@
 import os
-import subprocess
+import shutil
+import json
 import sys
 
-def create_angular_project(folder_path):
-    # Change the current working directory to the specified folder
+def copy_project(source_dir, target_dir):
     try:
-        os.chdir(folder_path)
-    except OSError as e:
-        print(f"Error changing directory: {e}")
-        return
-
-    # Define the name of your Angular project
-    project_name = "my-angular-app"
-
-    # Run the Angular CLI command to create a new project
-    try:
-        subprocess.run(["ng", "new", project_name, "--skip-install"], shell=True, check=True)
-        print(f"Angular project '{project_name}' has been created successfully.")
-    except subprocess.CalledProcessError as e:
-        print(f"Failed to create Angular project. Error: {e}")
-    except FileNotFoundError:
-        print("Angular CLI ('ng') is not installed or not found in PATH.")
-        
-if __name__ == "__main__":
-    if len(sys.argv) != 2:
-        print("Usage: python create_angular_project.py <path_to_folder>")
+        shutil.copytree(source_dir, target_dir)
+    except FileExistsError:
+        print("Target directory already exists.")
+        sys.exit(1)
+    except Exception as e:
+        print(f"Error copying project: {e}")
         sys.exit(1)
 
-    folder_path = sys.argv[1]
-    create_angular_project(folder_path)
+def filter_components(project_dir, components):
+    # Assuming all components are stored under project_dir/src/app/
+    components_dir = os.path.join(project_dir, 'src', 'app').replace("\\", "/")
+    for item in os.listdir(components_dir):
+        item_path = os.path.join(components_dir, item).replace("\\", "/")
+        if os.path.isdir(item_path) and item not in components:
+            shutil.rmtree(item_path)
+            print(f"Removed {item} component.")
+
+def main():
+    if len(sys.argv) != 4:
+        sys.exit(1)
+    source_project_dir = sys.argv[1]
+    target_project_dir = sys.argv[2]
+    json_file_path = sys.argv[3]
+
+    # Read the JSON file to get the list of components
+    try:
+        with open(json_file_path, 'r') as json_file:
+            data = json.load(json_file)
+            components = data.get('components', [])
+            if not components:
+                print("No components in JSON file.")
+                sys.exit(1)
+    except Exception as e:
+        print(f"Error reading the JSON file: {e}")
+        sys.exit(1)
+
+    copy_project(source_project_dir, target_project_dir)
+    filter_components(target_project_dir, components)
+
+if __name__ == "__main__":
+    main()
