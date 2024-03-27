@@ -1,0 +1,19 @@
+{
+    "button-component": {
+        "positions": [
+            [20,12],
+            [100,230]
+        ],
+        "design": [
+            {
+                "background-color": "red"
+            },
+            {
+                "background-color": "blue"
+            }
+        ],
+        "logic": [
+            "TODO"
+        ]
+    }
+}
