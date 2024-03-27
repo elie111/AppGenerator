@@ -14,6 +14,9 @@ Started working on the Project and did some research on App Generators, [here is
  * **25/3 - 26/3:** 
 Started implementing the app generator, a script that receives a json file that has description of each component we want to add, and then generated an angular components with those components, for now we only can read the json app and generate the angular app,next step is to create pre define components like buttons and add them based on the json file rules.\
 **Hours worked: 2h**
+ * **27/3:** 
+Successfully added the first element dynamically based on the json File. Added all the needed prebuilt components to the base project, and then we clone it and add to the main html page the components that are in the components array in the json file.\
+**Hours worked: 3h**
 
 
-**Total ammount of hours spent on the project: 6h**
+**Total ammount of hours spent on the project: 9h**

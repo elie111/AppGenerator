@@ -18,9 +18,12 @@ def filter_components(project_dir, components):
     components_dir = os.path.join(project_dir, 'src', 'app').replace("\\", "/")
     for item in os.listdir(components_dir):
         item_path = os.path.join(components_dir, item).replace("\\", "/")
-        if os.path.isdir(item_path) and item not in components:
-            shutil.rmtree(item_path)
-            print(f"Removed {item} component.")
+        if os.path.isdir(item_path):
+            file_path = sys.argv[2]+'/src/app/app.component.html'
+            component_tag = '<app-button-component>Hello World</app-button-component>'
+            with open(file_path, 'a') as file:
+                file.write(f"\n{component_tag}\n")
+            print(f"Appended {component_tag} to {file_path}.")
 
 def main():
     if len(sys.argv) != 4:
