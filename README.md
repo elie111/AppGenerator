@@ -17,6 +17,8 @@ Started implementing the app generator, a script that receives a json file that 
  * **27/3:** 
 Successfully added the first element dynamically based on the json File. Added all the needed pre-built components to the base project, and then we clone it and add to the main html page the components that are in the components array in the json file.\
 **Hours worked: 3h**
+Successfully positioned elements based on the json values and not just using a pre-defined values.Modified the json file format. And started working on the design, only thing missing is adding the class name to the relevant component.\
+**Hours worked: 3h**
 
 
-**Total ammount of hours spent on the project: 9h**
+**Total ammount of hours spent on the project: 12h**

@@ -1,15 +1,17 @@
 {
     "button-component": {
         "positions": [
-            [20,12],
-            [100,230]
+            ["300px","530px"],
+            ["200px","50px"]
         ],
-        "design": [
+        "styles": [
             {
-                "background-color": "red"
+                "background-color": "red",
+                "font-size": "30px"
             },
             {
-                "background-color": "blue"
+                "background-color": "blue",
+                "font-size": "12px"
             }
         ],
         "logic": [
