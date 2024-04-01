@@ -20,6 +20,9 @@ Successfully added the first element dynamically based on the json File. Added a
 * **28/3:** 
 Successfully positioned elements based on the json values and not just using a pre-defined values.Modified the json file format. And started working on the design, only thing missing is adding the class name to the relevant component.\
 **Hours worked: 3h**
+* **1/4:** 
+Added the styles the relevant elements, added 2 more built-in components, and started working on logic, if clicked in button then we change the chosen componen style, changed the JSON file.\
+**Hours worked: 3h**
 
 
-**Total ammount of hours spent on the project: 12h**
+**Total ammount of hours spent on the project: 15h**

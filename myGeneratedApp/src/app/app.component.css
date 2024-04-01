@@ -1,3 +1,1 @@
-button{
-    position: absolute;
-}
+.app-button-component-1 {  background-color: red;  font-size: 30px;}.app-button-component-2 {  background-color: blue;  font-size: 12px;}.app-section-component-1 {  background-color: yellow;  z-index: 0;  width: 50px;  height: 50px;}.app-section-component-2 {  background-color: green;  border: none;  width: 50px;  height: 50px;}
