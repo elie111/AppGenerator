@@ -28,4 +28,4 @@ Started working on routing to move between screens.\
 **Hours worked: 1h**
 
 
-**Total ammount of hours spent on the project: 15h**
+**Total ammount of hours spent on the project: 16h**
