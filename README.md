@@ -23,6 +23,9 @@ Successfully positioned elements based on the json values and not just using a p
 * **1/4:** 
 Added the styles to the relevant elements, added 2 more built-in components, and started working on the logic, if clicked on button then we change the chosen component style, changed the JSON file.\
 **Hours worked: 3h**
+* **2/4:** 
+Started working on routing to move between screens.\
+**Hours worked: 1h**
 
 
 **Total ammount of hours spent on the project: 15h**
