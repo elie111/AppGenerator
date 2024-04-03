@@ -26,6 +26,9 @@ Added the styles to the relevant elements, added 2 more built-in components, and
 * **2/4:** 
 Started working on routing to move between screens.\
 **Hours worked: 1h**
+* **3/4:** 
+Fixed few styling issues, and Created first version of the app with basic elements positioning and styling for my Demo inside the vesrion_1 branch, and worked on trying to solve the routing problem.\
+**Hours worked: 2h**
 
 
-**Total ammount of hours spent on the project: 16h**
+**Total ammount of hours spent on the project: 18h**
