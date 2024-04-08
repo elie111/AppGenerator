@@ -29,6 +29,9 @@ Started working on routing to move between screens.\
 * **3/4:** 
 Fixed few styling issues, and Created first version of the app with basic elements positioning and styling for my Demo inside the vesrion_1 branch, and worked on trying to solve the routing problem.\
 **Hours worked: 2h**
+* **4/4 - 7.4:** 
+Had a meeting with my Supervisor Roi and discussed my progress and points to Improve. Also switched from Angular to React to learn a new frontend framework, and started learning React.\
+**Hours worked: 2h**
 
 
-**Total ammount of hours spent on the project: 18h**
+**Total ammount of hours spent on the project: 20h**
