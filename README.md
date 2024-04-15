@@ -5,6 +5,7 @@
  
  ## Material and Tools:
  * [App generators guide](https://www.youtube.com/@wearenocode)
+ * [React Udemy Course](https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/25595350?start=0#overview)
  
  
  ## Timeline
@@ -30,8 +31,15 @@ Started working on routing to move between screens.\
 Fixed few styling issues, and Created first version of the app with basic elements positioning and styling for my Demo inside the vesrion_1 branch, and worked on trying to solve the routing problem.\
 **Hours worked: 2h**
 * **4/4 - 7.4:** 
-Had a meeting with my Supervisor Roi and discussed my progress and points to Improve. Also switched from Angular to React to learn a new frontend framework, and started learning React.\
+Had a meeting with my Supervisor Roi and discussed my progress and points to Improve. Also started doing research on other frontend frameworks that I can use insteaad of Angular to learn something new, my 2 candidates are Flutter and React.\
 **Hours worked: 2h**
+* **8.4 - 14.4:**
+Decided I will switch to React since it is more suitable to my project since we can easily create mini components and position elements via css, even though it's also possible in flutter it's going to be much more challenging and take more time to do basic things. 
+Bought a new [React Udemy Course](https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/25595350?start=0#overview) and watched the first 6 section that cover the basics of react such as how to create reusable components, and how to style them and more, I also watched the summary section at the end of the course to be learn a little bit about the more complex parts of React to see if they might help without deep diving into them.\
+**Hours worked: 18h**
+* **15.4:**
+Started Migrating my project from Angular to React, and started working on creating basic components such as buttons and sections.\
+**Hours worked: 4h**
 
 
-**Total ammount of hours spent on the project: 20h**
+**Total ammount of hours spent on the project: 42h**
