@@ -41,8 +41,8 @@ Bought a new [React Udemy Course](https://www.udemy.com/course/react-the-complet
 Started Migrating my project from Angular to React, and started working on creating basic components such as buttons and sections.\
 **Hours worked: 4h**
 * **16.4:**
-Planned the way I need to implement the structute of the App. in react it's easy to pass objects to child components via prop, so I need to pass the styles as an object and the logic as functions./
-I started implementing that logic in the Base App and started migrating the script from Angular to React.
+Planned the way I need to implement the structute of the App. in react it's easy to pass objects to child components via prop, so I need to pass the styles as an object and the logic as functions.\
+I started implementing that logic in the Base App and started migrating the script from Angular to React.\
 **Hours worked: 4h**
 
 
