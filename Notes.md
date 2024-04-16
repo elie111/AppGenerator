@@ -1,4 +1,4 @@
-<h1 align="center">TODO list </h1>
+<h1 align="center">Notes + TODO list </h1>
  
 * in each component I will 3 exported members, the component it self, the html object which will have all the html content
 and the css object which will have all the styles using the styled-component library
