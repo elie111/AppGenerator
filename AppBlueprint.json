@@ -1,39 +1,6 @@
 {
-    "page": {
-        "styles": [
-            {
-                "display": "block",
-                "width": "100%",
-                "height": "100%",
-                "background-color": "beige"
-            },
-            {
-                "display": "none",
-                "width": "100%",
-                "height": "100%",
-                "background-color": "beige"
-            }
-        ],
-        "logic": [
-            {
-                "id": "page-1"
-            },
-            {
-                "id": "page-2"
-            }
-        ]
-    },
     "section": {
-        "positions": [
-            [
-                "500px",
-                "1030px"
-            ],
-            [
-                "2000px",
-                "150px"
-            ]
-        ],
+        "page": [0,1],
         "styles": [
             {
                 "background-color": "yellow",
@@ -56,16 +23,7 @@
         ]
     },
     "button": {
-        "positions": [
-            [
-                "300px",
-                "530px"
-            ],
-            [
-                "200px",
-                "50px"
-            ]
-        ],
+        "page": [0,0],
         "styles": [
             {
                 "background-color": "red",

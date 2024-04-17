@@ -22,7 +22,10 @@ function App() {
 
   // Define components directly in the array
   const pages = [
-    <Button styles={buttonStyles} onClick={() => setCurrentPage(previousPage => (previousPage + 1) % 2)}>test button</Button>,
+    <>
+      <Button styles={buttonStyles} onClick={() => setCurrentPage(previousPage => (previousPage + 1) % 2)}>test button</Button>
+      <Section styles={sectionStyles} onClick={() => setCurrentPage(previousPage => (previousPage + 1) % 2)} />
+    </>,
     <Section styles={sectionStyles} onClick={() => setCurrentPage(previousPage => (previousPage + 1) % 2)} />
   ];
 
