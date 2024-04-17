@@ -1,6 +1,15 @@
+import styled from "styled-components";
 
-function Button({ styles, children }) {
-    return <button style={styles}>{children}</button>
+const StyledButton = styled.button`
+  ${props => props.styles}
+`;
+
+function Button({ styles, onClick, children }) {
+    return (
+        <StyledButton styles={styles} onClick={onClick} >
+            {children}
+        </StyledButton>
+    );
 }
 
 export default Button;

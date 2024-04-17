@@ -44,6 +44,14 @@ Started Migrating my project from Angular to React, and started working on creat
 Planned the way I need to implement the structute of the App. in react it's easy to pass objects to child components via prop, so I need to pass the styles as an object and the logic as functions.\
 I started implementing that logic in the Base App and started migrating the script from Angular to React.\
 **Hours worked: 4h**
+* **17.4:**
+Finished building the Base App which now works in the three important aspects:\
+1) we can add any built in component by simple creating the array that has all the components.\
+2) we can add the styling to every element, by simply adding the styles from the Json Object to the element tag, and the props in React will do the rest\
+3) we can add function to any element via the props as well\
+Also was able to implement the switching between pages logic using the useState from the React library\
+And successfully added functionality to buttons\
+**Hours worked: 4h**
 
-
-**Total ammount of hours spent on the project: 46h**
+    
+**Total ammount of hours spent on the project: 50h**

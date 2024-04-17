@@ -1,16 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
 import Button from './Button/Button';
 import Section from './Section/Section';
+import { useState } from 'react';
 
+const buttonStyles = `
+background-color: red;
+position: absolute;
+top: 50px;
+right: 100px`;
 
-const styles = "bgColor = red width = 100px height = 100px color = blue border = 2px yellow"
+const sectionStyles = `
+background-color: blue;
+position: absolute;
+top: 70px;
+right: 300px;
+width: 200px;
+height: 400px;`;
 
 function App() {
+  const [currentPage, setCurrentPage] = useState(0);
+
+  // Define components directly in the array
+  const pages = [
+    <Button styles={buttonStyles} onClick={() => setCurrentPage(previousPage => (previousPage + 1) % 2)}>test button</Button>,
+    <Section styles={sectionStyles} onClick={() => setCurrentPage(previousPage => (previousPage + 1) % 2)} />
+  ];
+
   return (
     <>
-      <Button styles = {styles}>test button</Button>
-      <Section></Section>
+      {pages[currentPage]}
     </>
   );
 }
