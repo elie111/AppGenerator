@@ -4,11 +4,9 @@ const StyledSection = styled.section`
   ${props => props.styles}
 `;
 
-function Section({ styles, onClick, children }) {
+function Section({ className, onClick, children }) {
     return (
-        <StyledSection styles={styles} onClick={onClick} >
-            {children}
-        </StyledSection>
+        <section className={className} onClick={onClick}>{children}</section>
     );
 }
 

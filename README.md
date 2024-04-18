@@ -6,6 +6,13 @@
  ## Material and Tools:
  * [App generators guide](https://www.youtube.com/@wearenocode)
  * [React Udemy Course](https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/25595350?start=0#overview)
+
+ ## To run the app generator:
+ 1) Clone project: git clone https://github.com/elie111/JenkinsHW.git
+ 2) Go to script direcotry: cd path-to-FinalProject/FinalProject/AppGenerator
+ 3) run the pytohn script: python main.py
+ 4) After the new app has been created go to the new react app directory: cd path-to-FinalProject/FinalProject/myGeneratedReactApp
+ 5) run the app: npm start
  
  
  ## Timeline
@@ -46,12 +53,18 @@ I started implementing that logic in the Base App and started migrating the scri
 **Hours worked: 4h**
 * **17.4:**
 Finished building the Base App which now works in the three important aspects:\
-1) we can add any built in component by simple creating the array that has all the components.\
-2) we can add the styling to every element, by simply adding the styles from the Json Object to the element tag, and the props in React will do the rest\
-3) we can add function to any element via the props as well\
-Also was able to implement the switching between pages logic using the useState from the React library\
+1) we can add any built in component by simple creating the array that has all the components.
+2) we can add the styling to every element, by simply adding the styles from the Json Object to the element tag, and the props in React will do the rest
+3) we can add function to any element via the props as well
+Also was able to implement the switching between pages logic using the useState from the React library
 And successfully added functionality to buttons\
+**Hours worked: 4h**
+* **18.4:**
+Given any JSON object with any of the built in components and styles and basic logic, the app generator can create a fully functional React app.\
+Finished first stage of the project, we can build apps using the button and section components and define multiple screens, and style each component, and use basic onclick functionality.\
+The next step is to add the required pre built componets, so that we can build our app: Navigation bar, menu, search bar, image buttons..
+Also restructured the project file to be more comprehensible.
 **Hours worked: 4h**
 
     
-**Total ammount of hours spent on the project: 50h**
+**Total ammount of hours spent on the project: 54h**

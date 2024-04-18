@@ -4,11 +4,9 @@ const StyledButton = styled.button`
   ${props => props.styles}
 `;
 
-function Button({ styles, onClick, children }) {
+function Button({ className, onClick, children }) {
     return (
-        <StyledButton styles={styles} onClick={onClick} >
-            {children}
-        </StyledButton>
+        <button className={className} onClick={onClick}>{children}</button>
     );
 }
 

@@ -19,18 +19,19 @@ height: 400px;`;
 
 function App() {
   const [currentPage, setCurrentPage] = useState(0);
-
+  // Insert pages array here
   // Define components directly in the array
-  const pages = [
-    <>
-      <Button styles={buttonStyles} onClick={() => setCurrentPage(previousPage => (previousPage + 1) % 2)}>test button</Button>
-      <Section styles={sectionStyles} onClick={() => setCurrentPage(previousPage => (previousPage + 1) % 2)} />
-    </>,
-    <Section styles={sectionStyles} onClick={() => setCurrentPage(previousPage => (previousPage + 1) % 2)} />
-  ];
+  // const pages = [
+  //   <>
+  //     <Button styles={buttonStyles} onClick={() => setCurrentPage(previousPage => (previousPage + 1) % 2)}>test button</Button>
+  //     <Section styles={sectionStyles} onClick={() => setCurrentPage(previousPage => (previousPage + 1) % 2)} />
+  //   </>,
+  //   <Section styles={sectionStyles} onClick={() => setCurrentPage(previousPage => (previousPage + 1) % 2)} />
+  // ];
 
   return (
     <>
+    <title>test app name</title>
       {pages[currentPage]}
     </>
   );
