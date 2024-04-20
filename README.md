@@ -72,9 +72,9 @@ I started working on the list of components that I need to add: header, ticker, 
 I added images, image buttons, and headers, headers are the top part of the app that has the profile picture, app name / page name and buttons, right now we have static ammount of buttons with specific functionality but will later add a feature to let the user pick which of the buttons to use and which to hide.\
 Also modified the JSON object to include all of the components we have so far: section, button, image, image button, header. The app has 2 pages that we can switch between by clicking on the profile picture in the header.\
 Started working on the next component which is the side navigation bar.\
-[Figma Design](https://www.figma.com/file/1ObCyFnAhEclOQ1NWssom8/Untitled?type=design&node-id=0%3A1&mode=dev&t=e8lM78poTQrd88JO-1)
-[Results](progress-Images/page-1)
-[Results](progress-Images/page-2)
+[Figma Design](https://www.figma.com/file/1ObCyFnAhEclOQ1NWssom8/Untitled?type=design&node-id=0%3A1&mode=dev&t=e8lM78poTQrd88JO-1)\
+[Results 1](Progress-Images/page-1.png)\
+[Results 2](Progress-Images/page-2.png)\
 **Hours worked: 8h**
 
     
