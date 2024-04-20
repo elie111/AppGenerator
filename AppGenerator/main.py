@@ -11,7 +11,7 @@ def generateApp(original_path, new_path, json_path):
 
 
 if __name__ == "__main__":
-    original_project_path = "../my-react-app"
-    new_project_path = "../myGeneratedReactApp"
-    json_file_path = "../AppBlueprint.json"
+    original_project_path = "./BaseApp"
+    new_project_path = "./myGeneratedReactApp"
+    json_file_path = "./AppBlueprint.json"
     generateApp(original_project_path, new_project_path, json_file_path)

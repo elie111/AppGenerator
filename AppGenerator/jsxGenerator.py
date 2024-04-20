@@ -11,14 +11,9 @@ class JSXGenerator:
         for component_type, details in data.items():
             for idx, page in enumerate(details["page"]):
                 component_id = f"{component_type}-{idx + 1}"
-                if component_type == "button":
-                    page_components[page].append(
-                        f'<Button className="{component_id}" onClick={{() => setCurrentPage(previousPage => (previousPage + 1) % 2)}}>test button</Button>'
-                    )
-                elif component_type == "section":
-                    page_components[page].append(
-                        f'<Section className="{component_id}" onClick={{() => setCurrentPage(previousPage => (previousPage + 1) % 2)}} />'
-                    )
+                page_components[page].append(
+                    f'<{component_type} className="{component_id}" params={{{details["logic"][idx]["params"]}}} onClick={{() => setCurrentPage(previousPage => (previousPage + 1) % 2)}}>test button</{component_type}>'
+                )
 
         jsx_content = "const pages = [\n"
         for page in page_components:

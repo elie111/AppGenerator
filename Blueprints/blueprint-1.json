@@ -1,0 +1,159 @@
+{
+    "Header": {
+        "page": [
+            0,
+            1
+        ],
+        "styles": [
+            {
+                "background-color": "red",
+                "font-size": "30px"
+            },
+            {
+                "background-color": "blue",
+                "font-size": "50px"
+            }
+        ],
+        "logic": [
+            {
+                "id": "button-1",
+                "parent": "page-1",
+                "trigger": "onClick",
+                "role": "move",
+                "params": {
+                    "source": "/prisonMike.jpg"
+                }
+            },
+            {
+                "id": "button-2",
+                "trigger": "onClick",
+                "role": "move",
+                "params": {
+                    "source": "/providence.jpg"
+                }
+            }
+        ]
+    },
+    "Section": {
+        "page": [
+            0,
+            1
+        ],
+        "styles": [
+            {
+                "background-color": "yellow",
+                "z-index": "0",
+                "width": "50px",
+                "height": "50px"
+            },
+            {
+                "background-color": "green",
+                "border": "none",
+                "width": "50px",
+                "height": "50px"
+            }
+        ],
+        "logic": [
+            {
+                "id": "button-1",
+                "parent": "page-1",
+                "trigger": "onClick",
+                "role": "move",
+                "params": {}
+            },
+            {
+                "id": "button-2",
+                "trigger": "onClick",
+                "role": "move",
+                "params": {}
+            }
+        ]
+    },
+    "Button": {
+        "page": [
+            0,
+            0
+        ],
+        "styles": [
+            {
+                "background-color": "red",
+                "font-size": "30px"
+            },
+            {
+                "background-color": "blue",
+                "font-size": "12px"
+            }
+        ],
+        "logic": [
+            {
+                "id": "button-1",
+                "parent": "page-1",
+                "trigger": "onClick",
+                "role": "move",
+                "params": {}
+            },
+            {
+                "id": "button-2",
+                "trigger": "onClick",
+                "role": "move",
+                "params": {}
+            }
+        ]
+    },
+    "ImageButton": {
+        "page": [
+            0
+        ],
+        "styles": [
+            {
+                "background-color": "red",
+                "font-size": "30px"
+            }
+        ],
+        "logic": [
+            {
+                "id": "button-2",
+                "trigger": "onClick",
+                "role": "move",
+                "params": {
+                    "source": "prisonMike.jpg"
+                }
+            }
+        ]
+    },
+    "Image": {
+        "page": [
+            0,
+            1
+        ],
+        "styles": [
+            {
+                "background-color": "red",
+                "font-size": "30px"
+            },
+            {
+                "background-color": "blue",
+                "font-size": "12px"
+            }
+        ],
+        "logic": [
+            {
+                "id": "button-1",
+                "parent": "page-1",
+                "trigger": "onClick",
+                "role": "move",
+                "params": {
+                    "source": "/providence.jpg"
+                }
+            },
+            {
+                "id": "button-2",
+                "trigger": "onClick",
+                "role": "move",
+                "params": {
+                    "source": "/providence.jpg"
+                }
+            }
+        ]
+    }
+}

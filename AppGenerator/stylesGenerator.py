@@ -12,6 +12,6 @@ class CSSGenerator:
                     + " ".join(f"{k}: {v};" for k, v in style.items())
                     + "}\n"
                 )
-        css_path = os.path.join(new_path, "src", "app.css")
+        css_path = os.path.join(new_path, "src", "GeneratedStyles.css")
         with open(css_path, "w") as css_file:
             css_file.write(css_content)

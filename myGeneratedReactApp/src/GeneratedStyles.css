@@ -1,0 +1,9 @@
+.Header-1 {background-color: navy; font-size: 34px; color: white; padding: 25px; text-align: center; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);}
+.Header-2 {background-color: darkred; font-size: 34px; color: white; padding: 25px; text-align: center; box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);}
+.Section-1 {background: linear-gradient(to right top, #ff7e5f, #feb47b); clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); height: 350px; width: 350px; box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);}
+.Section-2 {background: linear-gradient(to left top, #6a3093, #a044ff); clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); height: 350px; width: 350px; box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);}
+.Image-1 {width: 120px; height: 120px; position: absolute; top: 60px; left: 110px; border-radius: 50%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);}
+.Image-2 {width: 120px; height: 120px; position: absolute; top: 60px; right: 110px; border-radius: 50%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);}
+.Button-1 {background-color: transparent; border: 2px solid white; color: white; font-size: 18px; padding: 12px 24px; margin: 10px; border-radius: 30px; transition: background-color 0.3s, color 0.3s;}
+.Button-2 {background-color: transparent; border: 2px solid white; color: white; font-size: 18px; padding: 12px 24px; margin: 10px; border-radius: 30px; transition: background-color 0.3s, color 0.3s;}
+.ImageButton-1 {background-color: crimson; font-size: 30px; border-radius: 50%; padding: 10px; box-shadow: 0 5px 10px rgba(0, 0, 0, 0.4);}

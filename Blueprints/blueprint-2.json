@@ -1,0 +1,161 @@
+{
+    "Header": {
+        "page": [0, 1],
+        "styles": [
+            {
+                "background-color": "navy",
+                "font-size": "30px",
+                "color": "white",
+                "padding": "20px",
+                "text-align": "center"
+            },
+            {
+                "background-color": "darkred",
+                "font-size": "30px",
+                "color": "white",
+                "padding": "20px",
+                "text-align": "center"
+            }
+        ],
+        "logic": [
+            {
+                "id": "button-1",
+                "parent": "page-1",
+                "trigger": "onClick",
+                "role": "move",
+                "params": {
+                    "source": "/prisonMike.jpg"
+                }
+            },
+            {
+                "id": "button-2",
+                "trigger": "onClick",
+                "role": "move",
+                "params": {
+                    "source": "/providence.jpg"
+                }
+            }
+        ]
+    },
+    "Section": {
+        "page": [0, 1],
+        "styles": [
+            {
+                "background": "linear-gradient(to right, #ff7e5f, #feb47b)",
+                "clip-path": "polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)",
+                "height": "300px",
+                "width": "300px"
+            },
+            {
+                "background": "linear-gradient(to left, #6a3093, #a044ff)",
+                "clip-path": "polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)",
+                "height": "300px",
+                "width": "300px"
+            }
+        ],
+        "logic": [
+            {
+                "id": "button-1",
+                "parent": "page-1",
+                "trigger": "onClick",
+                "role": "move",
+                "params": {}
+            },
+            {
+                "id": "button-2",
+                "trigger": "onClick",
+                "role": "move",
+                "params": {}
+            }
+        ]
+    },
+    "Image": {
+        "page": [0, 1],
+        "styles": [
+            {
+                "width": "100px",
+                "height": "100px",
+                "position": "absolute",
+                "top": "50px",
+                "left": "100px"
+            },
+            {
+                "width": "100px",
+                "height": "100px",
+                "position": "absolute",
+                "top": "50px",
+                "right": "100px"
+            }
+        ],
+        "logic": [
+            {
+                "id": "button-1",
+                "parent": "page-1",
+                "trigger": "onClick",
+                "role": "move",
+                "params": {
+                    "source": "/providence.jpg"
+                }
+            },
+            {
+                "id": "button-2",
+                "trigger": "onClick",
+                "role": "move",
+                "params": {
+                    "source": "/providence.jpg"
+                }
+            }
+        ]
+    },
+    "Button": {
+        "page": [0, 0],
+        "styles": [
+            {
+                "background-color": "transparent",
+                "border": "none",
+                "color": "white",
+                "font-size": "16px"
+            },
+            {
+                "background-color": "transparent",
+                "border": "none",
+                "color": "white",
+                "font-size": "16px"
+            }
+        ],
+        "logic": [
+            {
+                "id": "button-1",
+                "parent": "page-1",
+                "trigger": "onClick",
+                "role": "move",
+                "params": {}
+            },
+            {
+                "id": "button-2",
+                "trigger": "onClick",
+                "role": "move",
+                "params": {}
+            }
+        ]
+    },
+    "ImageButton": {
+        "page": [0],
+        "styles": [
+            {
+                "background-color": "red",
+                "font-size": "30px"
+            }
+        ],
+        "logic": [
+            {
+                "id": "button-2",
+                "trigger": "onClick",
+                "role": "move",
+                "params": {
+                    "source": "prisonMike.jpg"
+                }
+            }
+        ]
+    }
+}

@@ -1,37 +1,22 @@
 {
-    "section": {
-        "page": [0,1],
+    "Header": {
+        "page": [0, 1],
         "styles": [
             {
-                "background-color": "yellow",
-                "z-index": "0",
-                "width": "50px",
-                "height": "50px"
+                "background-color": "navy",
+                "font-size": "34px",
+                "color": "white",
+                "padding": "25px",
+                "text-align": "center",
+                "box-shadow": "0px 4px 8px rgba(0, 0, 0, 0.5)"
             },
             {
-                "background-color": "green",
-                "border": "none",
-                "width": "50px",
-                "height": "50px"
-            }
-        ],
-        "logic": [
-            {
-                "id": "section-1",
-                "parent": "page-1"
-            }
-        ]
-    },
-    "button": {
-        "page": [0,0],
-        "styles": [
-            {
-                "background-color": "red",
-                "font-size": "30px"
-            },
-            {
-                "background-color": "blue",
-                "font-size": "12px"
+                "background-color": "darkred",
+                "font-size": "34px",
+                "color": "white",
+                "padding": "25px",
+                "text-align": "center",
+                "box-shadow": "0px 4px 8px rgba(0, 0, 0, 0.5)"
             }
         ],
         "logic": [
@@ -40,13 +25,155 @@
                 "parent": "page-1",
                 "trigger": "onClick",
                 "role": "move",
-                "params": "page-2"
+                "params": {
+                    "source": "/prisonMike.jpg"
+                }
             },
             {
                 "id": "button-2",
                 "trigger": "onClick",
                 "role": "move",
-                "params": "page-2"
+                "params": {
+                    "source": "/spongy.jpg"
+                }
+            }
+        ]
+    },
+    "Section": {
+        "page": [0, 1],
+        "styles": [
+            {
+                "background": "linear-gradient(to right top, #ff7e5f, #feb47b)",
+                "clip-path": "polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)",
+                "height": "350px",
+                "width": "350px",
+                "box-shadow": "0 6px 10px rgba(0, 0, 0, 0.3)"
+            },
+            {
+                "background": "linear-gradient(to left top, #6a3093, #a044ff)",
+                "clip-path": "polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)",
+                "height": "350px",
+                "width": "350px",
+                "box-shadow": "0 6px 10px rgba(0, 0, 0, 0.3)"
+            }
+        ],
+        "logic": [
+            {
+                "id": "button-1",
+                "parent": "page-1",
+                "trigger": "onClick",
+                "role": "move",
+                "params": {}
+            },
+            {
+                "id": "button-2",
+                "trigger": "onClick",
+                "role": "move",
+                "params": {}
+            }
+        ]
+    },
+    "Image": {
+        "page": [0, 1],
+        "styles": [
+            {
+                "width": "120px",
+                "height": "120px",
+                "position": "absolute",
+                "top": "60px",
+                "left": "110px",
+                "border-radius": "50%",
+                "box-shadow": "0 4px 8px rgba(0, 0, 0, 0.2)"
+            },
+            {
+                "width": "120px",
+                "height": "120px",
+                "position": "absolute",
+                "top": "60px",
+                "right": "110px",
+                "border-radius": "50%",
+                "box-shadow": "0 4px 8px rgba(0, 0, 0, 0.2)"
+            }
+        ],
+        "logic": [
+            {
+                "id": "button-1",
+                "parent": "page-1",
+                "trigger": "onClick",
+                "role": "move",
+                "params": {
+                    "source": "/providence.jpg"
+                }
+            },
+            {
+                "id": "button-2",
+                "trigger": "onClick",
+                "role": "move",
+                "params": {
+                    "source": "/providence.jpg"
+                }
+            }
+        ]
+    },
+    "Button": {
+        "page": [0, 0],
+        "styles": [
+            {
+                "background-color": "transparent",
+                "border": "2px solid white",
+                "color": "white",
+                "font-size": "18px",
+                "padding": "12px 24px",
+                "margin": "10px",
+                "border-radius": "30px",
+                "transition": "background-color 0.3s, color 0.3s"
+            },
+            {
+                "background-color": "transparent",
+                "border": "2px solid white",
+                "color": "white",
+                "font-size": "18px",
+                "padding": "12px 24px",
+                "margin": "10px",
+                "border-radius": "30px",
+                "transition": "background-color 0.3s, color 0.3s"
+            }
+        ],
+        "logic": [
+            {
+                "id": "button-1",
+                "parent": "page-1",
+                "trigger": "onClick",
+                "role": "move",
+                "params": {}
+            },
+            {
+                "id": "button-2",
+                "trigger": "onClick",
+                "role": "move",
+                "params": {}
+            }
+        ]
+    },
+    "ImageButton": {
+        "page": [0],
+        "styles": [
+            {
+                "background-color": "crimson",
+                "font-size": "30px",
+                "border-radius": "50%",
+                "padding": "10px",
+                "box-shadow": "0 5px 10px rgba(0, 0, 0, 0.4)"
+            }
+        ],
+        "logic": [
+            {
+                "id": "button-2",
+                "trigger": "onClick",
+                "role": "move",
+                "params": {
+                    "source": "/spongy.jpg"
+                }
             }
         ]
     }
