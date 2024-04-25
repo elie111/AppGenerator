@@ -1,0 +1,145 @@
+{
+    "header1": {
+        "id": "header",
+        "page": 0,
+        "children": {},
+        "styles": {
+            "background-color": "blue",
+            "color": "white"
+        },
+        "params": {}
+    },
+    "sidebar1": {
+        "id": "sidebar",
+        "page": 0,
+        "children": {},
+        "styles": {
+            "background-color": "gray"
+        },
+        "params": {}
+    },
+    "section1": {
+        "id": "section",
+        "page": 0,
+        "children": {
+            "button3": {
+                "id": "button",
+                "page": 0,
+                "children": {},
+                "styles": {
+                    "background-color": "green"
+                },
+                "params": {}
+            }
+        },
+        "styles": {
+            "background-color": "lightblue"
+        },
+        "params": {}
+    },
+    "button1": {
+        "id": "button",
+        "page": 0,
+        "children": {},
+        "styles": {
+            "background-color": "green"
+        },
+        "params": {
+            "role": "screen",
+            "target": 0
+        }
+    },
+    "imagebutton1": {
+        "id": "imagebutton",
+        "page": 0,
+        "children": {},
+        "styles": {
+            "border": "1px solid black"
+        },
+        "params": {
+            "source": "spongy.jpg",
+            "alink": "https://example.com",
+            "role": "screen",
+            "target": 1
+        }
+    },
+    "header2": {
+        "id": "header",
+        "page": 1,
+        "children": {},
+        "styles": {
+            "background-color": "coral",
+            "color": "navy"
+        },
+        "params": {}
+    },
+    "sidebar2": {
+        "id": "sidebar",
+        "page": 1,
+        "children": {},
+        "styles": {
+            "background-color": "darkslategray"
+        },
+        "params": {
+            "content": {
+                "title": "test name",
+                "image": "providence.jpg",
+                "buttons": [
+                    [
+                        {
+                            "button-1": "gohome"
+                        },
+                        {
+                            "button-2": "gohome"
+                        }
+                    ],
+                    [
+                        {
+                            "button-3": "gohome"
+                        }
+                    ],
+                    [
+                        {
+                            "button-4": "gohome"
+                        }
+                    ]
+                ]
+            }
+        }
+    },
+    "section2": {
+        "id": "section",
+        "page": 1,
+        "children": {},
+        "styles": {
+            "background-color": "cornflowerblue"
+        },
+        "params": {}
+    },
+    "button2": {
+        "id": "button",
+        "page": 1,
+        "children": {},
+        "styles": {
+            "background-color": "red"
+        },
+        "params": {
+            "role": "screen",
+            "target": 0
+        }
+    },
+    "imagebutton2": {
+        "id": "imagebutton",
+        "page": 1,
+        "children": {},
+        "styles": {
+            "border": "2px solid darkblue"
+        },
+        "params": {
+            "source": "prisonMike.jpg",
+            "alink": "https://example.com",
+            "role": "screen",
+            "target": 0
+        }
+    }
+}

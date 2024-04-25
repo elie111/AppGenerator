@@ -1,180 +1,221 @@
 {
-    "Header": {
-        "page": [0, 1],
-        "styles": [
-            {
-                "background-color": "navy",
-                "font-size": "34px",
-                "color": "white",
-                "padding": "25px",
-                "text-align": "center",
-                "box-shadow": "0px 4px 8px rgba(0, 0, 0, 0.5)"
-            },
-            {
-                "background-color": "darkred",
-                "font-size": "34px",
-                "color": "white",
-                "padding": "25px",
-                "text-align": "center",
-                "box-shadow": "0px 4px 8px rgba(0, 0, 0, 0.5)"
-            }
-        ],
-        "logic": [
-            {
-                "id": "button-1",
-                "parent": "page-1",
-                "trigger": "onClick",
-                "role": "move",
-                "params": {
-                    "source": "/prisonMike.jpg"
-                }
-            },
-            {
-                "id": "button-2",
-                "trigger": "onClick",
-                "role": "move",
-                "params": {
-                    "source": "/spongy.jpg"
+    "header1": {
+        "id": "header",
+        "page": 0,
+        "children": {},
+        "styles": {
+            "background-color": "blue",
+            "color": "white"
+        },
+        "params": {
+            "title": "MyApp",
+            "source": "spongy.jpg",
+            "buttons": {
+                "sidebar": {
+                    "targetId": "sidebar",
+                    "action": "toggleSideBar",
+                    "actionInfo": ""
+                },
+                "logout": {
+                    "targetId": "app",
+                    "action": "page",
+                    "actionInfo": 2
                 }
             }
-        ]
+        }
     },
-    "Section": {
-        "page": [0, 1],
-        "styles": [
-            {
-                "background": "linear-gradient(to right top, #ff7e5f, #feb47b)",
-                "clip-path": "polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)",
-                "height": "350px",
-                "width": "350px",
-                "box-shadow": "0 6px 10px rgba(0, 0, 0, 0.3)"
-            },
-            {
-                "background": "linear-gradient(to left top, #6a3093, #a044ff)",
-                "clip-path": "polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%)",
-                "height": "350px",
-                "width": "350px",
-                "box-shadow": "0 6px 10px rgba(0, 0, 0, 0.3)"
-            }
-        ],
-        "logic": [
-            {
-                "id": "button-1",
-                "parent": "page-1",
-                "trigger": "onClick",
-                "role": "move",
-                "params": {}
-            },
-            {
-                "id": "button-2",
-                "trigger": "onClick",
-                "role": "move",
-                "params": {}
-            }
-        ]
-    },
-    "Image": {
-        "page": [0, 1],
-        "styles": [
-            {
-                "width": "120px",
-                "height": "120px",
-                "position": "absolute",
-                "top": "60px",
-                "left": "110px",
-                "border-radius": "50%",
-                "box-shadow": "0 4px 8px rgba(0, 0, 0, 0.2)"
-            },
-            {
-                "width": "120px",
-                "height": "120px",
-                "position": "absolute",
-                "top": "60px",
-                "right": "110px",
-                "border-radius": "50%",
-                "box-shadow": "0 4px 8px rgba(0, 0, 0, 0.2)"
-            }
-        ],
-        "logic": [
-            {
-                "id": "button-1",
-                "parent": "page-1",
-                "trigger": "onClick",
-                "role": "move",
-                "params": {
-                    "source": "/providence.jpg"
+    "sidebar1": {
+        "id": "sidebar",
+        "page": 0,
+        "children": {},
+        "styles": {
+            "position": "relative",
+            "z-index": "3",
+            "background-color": "gray"
+        },
+        "params": {
+            "title": "MySideBar",
+            "source": "providence.jpg",
+            "buttons": [
+                {
+                    "home": {
+                        "targetId": "app",
+                        "action": "page",
+                        "actionInfo": 2
+                    }
+                },
+                {},
+                {},
+                {
+                    "profile": {
+                        "targetId": "app",
+                        "action": "page",
+                        "actionInfo": 2
+                    },
+                    "settings": {
+                        "targetId": "app",
+                        "action": "page",
+                        "actionInfo": 0
+                    }
                 }
-            },
-            {
-                "id": "button-2",
-                "trigger": "onClick",
-                "role": "move",
-                "params": {
-                    "source": "/providence.jpg"
-                }
-            }
-        ]
+            ]
+        }
     },
-    "Button": {
-        "page": [0, 0],
-        "styles": [
-            {
-                "background-color": "transparent",
-                "border": "2px solid white",
-                "color": "white",
-                "font-size": "18px",
-                "padding": "12px 24px",
-                "margin": "10px",
-                "border-radius": "30px",
-                "transition": "background-color 0.3s, color 0.3s"
-            },
-            {
-                "background-color": "transparent",
-                "border": "2px solid white",
-                "color": "white",
-                "font-size": "18px",
-                "padding": "12px 24px",
-                "margin": "10px",
-                "border-radius": "30px",
-                "transition": "background-color 0.3s, color 0.3s"
-            }
-        ],
-        "logic": [
-            {
-                "id": "button-1",
-                "parent": "page-1",
-                "trigger": "onClick",
-                "role": "move",
-                "params": {}
-            },
-            {
-                "id": "button-2",
-                "trigger": "onClick",
-                "role": "move",
+    "section1": {
+        "id": "section",
+        "page": 0,
+        "children": {
+            "button3": {
+                "id": "button",
+                "page": 0,
+                "children": {},
+                "styles": {
+                    "background-color": "green"
+                },
                 "params": {}
             }
-        ]
+        },
+        "styles": {
+            "background-color": "lightblue"
+        },
+        "params": {}
     },
-    "ImageButton": {
-        "page": [0],
-        "styles": [
-            {
-                "background-color": "crimson",
-                "font-size": "30px",
-                "border-radius": "50%",
-                "padding": "10px",
-                "box-shadow": "0 5px 10px rgba(0, 0, 0, 0.4)"
-            }
-        ],
-        "logic": [
-            {
-                "id": "button-2",
-                "trigger": "onClick",
-                "role": "move",
+    "button1": {
+        "id": "button",
+        "page": 0,
+        "children": {},
+        "styles": {
+            "background-color": "green"
+        },
+        "params": {
+            "targetId": "app-test",
+            "action": "page",
+            "actionInfo": 1
+        }
+    },
+    "imagebutton1": {
+        "id": "imagebutton",
+        "page": 0,
+        "children": {},
+        "styles": {
+            "border": "1px solid black"
+        },
+        "params": {
+            "source": "spongy.jpg",
+            "alink": "https://example.com",
+            "targetId": "app",
+            "action": "page",
+            "actionInfo": 1
+        }
+    },
+    "header2": {
+        "id": "header",
+        "page": 1,
+        "children": {},
+        "styles": {
+            "background-color": "coral",
+            "color": "navy"
+        },
+        "params": {}
+    },
+    "sidebar2": {
+        "id": "sidebar",
+        "page": 1,
+        "children": {},
+        "styles": {
+            "position": "relative",
+            "z-index": "3",
+            "background-color": "gray"
+        },
+        "params": {
+            "title": "MySideBar",
+            "source": "providence.jpg",
+            "buttons": [
+                {
+                    "home": {
+                        "targetId": "app",
+                        "action": "page",
+                        "actionInfo": 2
+                    }
+                },
+                {},
+                {},
+                {
+                    "profile": {
+                        "targetId": "app",
+                        "action": "page",
+                        "actionInfo": 2
+                    },
+                    "settings": {
+                        "targetId": "app",
+                        "action": "page",
+                        "actionInfo": 1
+                    }
+                }
+            ]
+        }
+    },
+    "section2": {
+        "id": "section",
+        "page": 1,
+        "children": {
+            "text1": {
+                "id": "text",
+                "page": 0,
+                "children": {},
+                "styles": {
+                    "background-color": "transparent",
+                    "color": "navy"
+                },
                 "params": {
-                    "source": "/spongy.jpg"
+                    "content": "this is my demo text in a navy color with transparent background"
                 }
             }
-        ]
+        },
+        "styles": {
+            "background-color": "cornflowerblue"
+        },
+        "params": {}
+    },
+    "button2": {
+        "id": "button",
+        "page": 1,
+        "children": {},
+        "styles": {
+            "background-color": "red"
+        },
+        "params": {
+            "targetId": "app",
+            "action": "page",
+            "actionInfo": 0
+        }
+    },
+    "imagebutton2": {
+        "id": "imagebutton",
+        "page": 1,
+        "children": {},
+        "styles": {
+            "border": "2px solid darkblue"
+        },
+        "params": {
+            "source": "prisonMike.jpg",
+            "alink": "https://example.com",
+            "targetId": "app-test",
+            "action": "page",
+            "actionInfo": 0
+        }
+    },
+    "button4": {
+        "id": "button",
+        "page": 2,
+        "children": {},
+        "styles": {
+            "border": "2px solid darkblue"
+        },
+        "params": {
+            "targetId": "app",
+            "action": "page",
+            "actionInfo": 0
+        }
     }
 }

@@ -6,6 +6,7 @@
  ## Material and Tools:
  * [App generators guide](https://www.youtube.com/@wearenocode)
  * [React Udemy Course](https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/25595350?start=0#overview)
+ * [Python Udemy Course](https://www.udemy.com/course/the-python-programming-v39-comprehensive-bootcamp/learn/lecture/22753277?start=0#overview)
  * [Figma tutorial](https://www.youtube.com/watch?v=VRf8cyeuxoo)
  * [Figma tutorial](https://www.youtube.com/watch?v=JGLfyTDgfDc)
 
@@ -63,19 +64,43 @@ And successfully added functionality to buttons\
 * **18.4:**
 Given any JSON object with any of the built in components and styles and basic logic, the app generator can create a fully functional React app.\
 Finished first stage of the project, we can build apps using the button and section components and define multiple screens, and style each component, and use basic onclick functionality.\
-The next step is to add the required pre built componets, so that we can build our app: Navigation bar, menu, search bar, image buttons..
+The next step is to add the required pre built componets, so that we can build our app: sidebar, menu, search bar, image buttons..
 Also restructured the project file to be more comprehensible.
 **Hours worked: 4h**
 * **19.4:**
 To be able to understand what components I need to add and how to continue I needed to have a basic design of the App the I am hoping to build by the end of this project, so I watched few Figma tutorial which is a tool to design apps, [Basic scheduling App Built Via Figma](https://www.figma.com/file/1ObCyFnAhEclOQ1NWssom8/Untitled?type=design&node-id=0%3A1&mode=dev&t=e8lM78poTQrd88JO-1)\
-I started working on the list of components that I need to add: header, ticker, side navigation bar, search bar, cards, images, image buttons,and  supporting nested components\
+I started working on the list of components that I need to add: header, ticker, sidebar, search bar, cards, images, image buttons,and  supporting nested components\
 I added images, image buttons, and headers, headers are the top part of the app that has the profile picture, app name / page name and buttons, right now we have static ammount of buttons with specific functionality but will later add a feature to let the user pick which of the buttons to use and which to hide.\
 Also modified the JSON object to include all of the components we have so far: section, button, image, image button, header. The app has 2 pages that we can switch between by clicking on the profile picture in the header.\
-Started working on the next component which is the side navigation bar.\
+Started working on the next component which is the sidebar.\
 [Figma Design](https://www.figma.com/file/1ObCyFnAhEclOQ1NWssom8/Untitled?type=design&node-id=0%3A1&mode=dev&t=e8lM78poTQrd88JO-1)\
 [Results 1](Progress-Images/page-1.png)\
 [Results 2](Progress-Images/page-2.png)\
 **Hours worked: 8h**
+* **20.4:**
+I reached a point in the project where I am struggling a little bit with React, like in the sidebar, I am not sure for example how to add the button when the sidebar is closed, so I watched few more deep dive sections in React mainly focused on React hooks such as useState and useEffect,  and also found a python Udemy course and watched few important sections.
+ * [React Udemy Course](https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/25595350?start=0#overview)
+ * [Python Udemy Course](https://www.udemy.com/course/the-python-programming-v39-comprehensive-bootcamp/learn/lecture/22753277?start=0#overview)
+**Hours worked: 5h**
+* **21.4:**
+Added a very important feature, nested components, it will allow us to divide the app to different section within section and since our header and sidebar and card components are going to be limited (the structure predefined) nested components will allow the user with some extra effort to build their own header and sidebar, by using buttons and images and sections and texts. Also made almost Final JSON adjustments to pass logic via parameters more easily, only thing left to modify is probably the pages structure.\\
+And also continue working on the built in components, some of the issues I tried to solve: how will a button function? what is his role? and how to customize our headers and sidebar components.\
+**Hours worked: 5h**
+* **22.4:**
+Figured out a very efficient way of adding functionality to each component, which will make it much easier and smoother to add in the future other components, all components have styles, page number and nested children, but then they start to differ, each component requires different parameters, so I made Final changes to the JSON file, where we have params that allow us to send different params depending on the component. \\
+Successfully sdded the sidebar and it's now functional, only thing left is to be able to connect it to a button that can control it when it's closed and to add functionality to the sidebar buttons. Spent a lot of time debugging a react issue, when passing the setState function I got an error that it's not a function if I am passing it to more than one component. Also made plans on how to move on when it comes to styling (responsivness and nested components styles). And most importantly figured out what my approach with the buttons is going to be, buttons are basically a way to send a signal/flag to another component telling it to do something, so I also added to the button element: targetId (which component do we want to target), action (some components will have more than one action), actionInfo (more metadata about the action).\
+Started thinking on how I can achieve such a thing (probably observeable pattern).
+**Hours worked: 9h**
+* **23.4:**
+Implemented the observeabvle pattern that allows us to use buttons as "flaggers", each time we click a button we send a signal with 3 parameters (describer previously how it works), to do that I used the useEffect hook from React and the React context for state management to track each click. And now it's much easier and smoother to define functionality for nested buttons such as buttons inside the header or the sidebar.\
+Finished working and optimizing all the components I have added so far: Button, ImageButton, Text, Header, SideBar, Section, page switching.\
+Also added documentation for what a json file should be like, still in progress, it describes what each component needs to have as parameters.\
+Started working on the final list of components that will allow us to fully build our scheduling app that I designed in Figma: Cards, scrollable section and login and sign up pages.\
+[Here is a picture of the results after adding the sidebar and header](Progress-Images/header-and-sidebar.png)
 
-    
-**Total ammount of hours spent on the project: 62h**
+**Hours worked: 9h**
+* **24.4:**
+in progress \
+**Hours worked: ~h**
+
+**Total ammount of hours spent on the project: 90h**
