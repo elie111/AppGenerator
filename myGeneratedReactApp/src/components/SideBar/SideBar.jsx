@@ -9,7 +9,7 @@ const SideBar = ({ params }) => {
     const toggleSidebar = () => setIsOpen(!isOpen);
 
     useEffect(() => {
-        if (buttonState.id === "sidebar") {
+        if (buttonState.id === "sidebar1") {
             setIsOpen(previousState => !previousState);
         }
     }, [buttonState]);
@@ -44,7 +44,7 @@ const SideBar = ({ params }) => {
         <div className={`sidebar ${isOpen ? 'open' : 'closed'}`}>
             <div className="sidebar-header">
                 <div className='header-row-1'>
-                    <button className="close-button" onClick={toggleSidebar}>
+                    <button className="close-button-sdidebar" onClick={toggleSidebar}>
                         {isOpen ? 'Close' : 'Menu'}
                     </button>
                     <img className="sidebar-logo" src={params.source} alt="Sidebar Header" />

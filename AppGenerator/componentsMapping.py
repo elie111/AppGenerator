@@ -5,4 +5,7 @@ COMPONENTS_TAG = {
     "imagebutton": "ImageButton",
     "header": "Header",
     "sidebar": "SideBar",
+    "card": "Card",
+    "dropdown": "DropdownMenu",
+    "form": "Form"
 }

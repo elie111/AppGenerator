@@ -11,28 +11,44 @@ class JSXGenerator:
         JSXGenerator.insert_jsx(components, new_path)
 
     @staticmethod
-    def generate_components(data, isNested=False):
+    def generate_components(data):
         if len(data) <= 0:
             return {"": ""}
-        num_pages = max(component["page"] for component in data.values()) + 1
-        page_components = [[] for _ in range(num_pages)]
-
-        for component_id, details in data.items():
-            component_id = f"{component_id}"
-            page_components[details["page"]].append(
-                f'<{COMPONENTS_TAG[details["id"]]} key="{component_id}" className="{component_id}" params={{{details["params"]}}} nested={{{JSXGenerator.generate_components(details["children"],True)}}}>test button</{COMPONENTS_TAG[details["id"]]}>'
-            )
-        if isNested:
-            jsx_content = "[\n"
+        if "app" in data:
+            isNested = False
+            app = data["app"]
         else:
-            jsx_content = "const pages = [\n"
+            isNested = True
+            app = {"page": data}
 
-        for page in page_components:
-            jsx_content += "  <>\n    " + "\n    ".join(page) + "\n  </>,\n"
+        page_components = {}
+
+        for page, pageDetails in app.items():
+            page_components[page] = []
+        for page, pageDetails in app.items():
+            for component_id, details in pageDetails.items():
+                component_id = f"{component_id}"
+                page_components[page].append(
+                    f'<{COMPONENTS_TAG[details["id"]]} key="{component_id}" className="{component_id}" params={{{details["params"]}}}  switchPage={{setCurrentPage}} nested={{{JSXGenerator.generate_components(details["children"])}}}>test button</{COMPONENTS_TAG[details["id"]]}>'
+                )
         if isNested:
+            jsx_content = "["
+            for key, value in page_components.items():
+                jsx_content += "<>\n    " + "\n    ".join(value) + "\n  </>,\n"
             jsx_content += "]\n"
-        else:
-            jsx_content += "];\n"
+        if not isNested:
+            jsx_content = "const pages = {\n"
+            for key, value in page_components.items():
+                jsx_content += (
+                    '"'
+                    + key
+                    + '"'
+                    + ":  <>\n    "
+                    + "\n    ".join(value)
+                    + "\n  </>,\n"
+                )
+            jsx_content += "};\n"
+
         return jsx_content
 
     @staticmethod

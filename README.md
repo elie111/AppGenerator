@@ -100,7 +100,20 @@ Started working on the final list of components that will allow us to fully buil
 
 **Hours worked: 9h**
 * **24.4:**
-in progress \
-**Hours worked: ~h**
+Finished adding all built in components that we need to build my Figma design, and now technically we are 100% able to build such an app, I added a form component, which the user can decide how many input fields they want and what type and what role (login, signup, maybe will add more later), added a card component and a dropdown menu component, Also made changes to Json file making it even better and enhancing params logic.\
+Created an app with 4 pages that we switch between them via sidebar, header buttons, regular buttons, login button.., and used all of the built in components, here are few images to show our progress:\
+ * [Image 1](Progress-Images/Image-1.png)
+ * [Image 2](Progress-Images/Image-2.png)
+ * [Image 3](Progress-Images/Image-3.png)
+ * [Image 4](Progress-Images/Image-4.png)
+ * [Image 5](Progress-Images/Image-5.png)
 
-**Total ammount of hours spent on the project: 90h**
+ And started planning integrating Firebase to the App, started doing some research on how to use Firebase with React.\
+
+**Hours worked: 10h**
+* **25.4:**
+in progress\
+
+**Hours worked: ~**
+
+**Total ammount of hours spent on the project: 100h**

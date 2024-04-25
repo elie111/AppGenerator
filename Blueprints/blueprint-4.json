@@ -1,6 +1,6 @@
 {
     "metadata": {
-        "appname": "MyScheduler",
+        "appname": "my react app",
         "pages": 3,
         "firebase": "link"
     },
@@ -14,19 +14,18 @@
                     "color": "white"
                 },
                 "params": {
-                    "id": "header1",
                     "title": "MyApp",
                     "source": "spongy.jpg",
                     "buttons": {
                         "sidebar": {
-                            "targetId": "sidebar1",
+                            "targetId": "sidebar",
                             "action": "toggleSideBar",
-                            "actionInfo": ""
+                            "actionInfo": "home"
                         },
                         "logout": {
                             "targetId": "app",
                             "action": "page",
-                            "actionInfo": "login"
+                            "actionInfo": "test"
                         }
                     },
                     "targetId": "dropdown1",
@@ -43,7 +42,6 @@
                     "background-color": "gray"
                 },
                 "params": {
-                    "id": "sidebar1",
                     "title": "MySideBar",
                     "source": "providence.jpg",
                     "buttons": [
@@ -51,7 +49,7 @@
                             "home": {
                                 "targetId": "app",
                                 "action": "page",
-                                "actionInfo": "home"
+                                "actionInfo": "test"
                             }
                         },
                         {},
@@ -60,12 +58,12 @@
                             "profile": {
                                 "targetId": "app",
                                 "action": "page",
-                                "actionInfo": "profile"
+                                "actionInfo": "test"
                             },
                             "settings": {
                                 "targetId": "app",
                                 "action": "page",
-                                "actionInfo": "login"
+                                "actionInfo": "home"
                             }
                         }
                     ]
@@ -74,70 +72,31 @@
             "section1": {
                 "id": "section",
                 "children": {
-                    "card1": {
-                        "id": "card",
+                    "button3": {
+                        "id": "button",
                         "children": {},
-                        "styles": {},
-                        "params": {
-                            "source": "spongy.jpg",
-                            "info": {
-                                "name": "elie",
-                                "time": "1/5/2024",
-                                "location": "zoom",
-                                "zoomLink": "zoom.com",
-                                "description": "math class"
-                            },
-                            "targetId": "app-test",
-                            "action": "page",
-                            "actionInfo": "profile"
-                        }
-                    },
-                    "card2": {
-                        "id": "card",
-                        "children": {},
-                        "styles": {},
-                        "params": {
-                            "source": "spongy.jpg",
-                            "info": {
-                                "name": "roi",
-                                "time": "1/5/2024",
-                                "location": "zoom",
-                                "zoomLink": "zoom.com",
-                                "description": "math class"
-                            },
-                            "targetId": "app-test",
-                            "action": "page",
-                            "actionInfo": "profile"
-                        }
-                    },
-                    "card3": {
-                        "id": "card",
-                        "children": {},
-                        "styles": {},
-                        "params": {
-                            "source": "spongy.jpg",
-                            "info": {
-                                "name": "david",
-                                "time": "1/5/2024",
-                                "location": "zoom",
-                                "zoomLink": "zoom.com",
-                                "description": "math class"
-                            },
-                            "targetId": "app-test",
-                            "action": "page",
-                            "actionInfo": "profile"
-                        }
+                        "styles": {
+                            "background-color": "green"
+                        },
+                        "params": {}
                     }
                 },
                 "styles": {
-                    "display": "flex",
-                    "flex-direction": "row",
-                    "justify-content": "space-between",
-                    "align-items": "center",
-                    "background-color": "green",
-                    "width": "100%"
+                    "background-color": "lightblue"
                 },
                 "params": {}
+            },
+            "button1": {
+                "id": "button",
+                "children": {},
+                "styles": {
+                    "background-color": "green"
+                },
+                "params": {
+                    "targetId": "dropdown1",
+                    "action": "toggle",
+                    "actionInfo": ""
+                }
             },
             "imagebutton1": {
                 "id": "imagebutton",
@@ -149,6 +108,24 @@
                     "source": "spongy.jpg",
                     "alink": "https://example.com",
                     "targetId": "app",
+                    "action": "page",
+                    "actionInfo": "profile"
+                }
+            },
+            "card1": {
+                "id": "card",
+                "children": {},
+                "styles": {},
+                "params": {
+                    "source": "spongy.jpg",
+                    "info": {
+                        "name": "elie",
+                        "time": "1/5/2024",
+                        "location": "zoom",
+                        "zoomLink": "zoom.com",
+                        "description": "math class"
+                    },
+                    "targetId": "app-test",
                     "action": "page",
                     "actionInfo": "profile"
                 }
@@ -251,7 +228,6 @@
                     "background-color": "red"
                 },
                 "params": {
-                    "text": "Home",
                     "targetId": "app",
                     "action": "page",
                     "actionInfo": "home"
@@ -278,7 +254,20 @@
                     "border": "2px solid darkblue"
                 },
                 "params": {
-                    "text": "Home",
+                    "targetId": "app",
+                    "action": "page",
+                    "actionInfo": "home"
+                }
+            }
+        },
+        "test": {
+            "button5": {
+                "id": "button",
+                "children": {},
+                "styles": {
+                    "background-color": "red"
+                },
+                "params": {
                     "targetId": "app",
                     "action": "page",
                     "actionInfo": "home"
@@ -305,45 +294,31 @@
                     }
                 }
             },
-            "sectionLogin": {
-                "id": "section",
-                "children": {
-                    "button6": {
-                        "id": "button",
-                        "children": {},
-                        "styles": {
-                            "background-color": "red"
-                        },
-                        "params": {
-                            "text": "login",
-                            "targetId": "form1",
-                            "action": "login",
-                            "actionInfo": "profile"
-                        }
-                    },
-                    "button7": {
-                        "id": "button",
-                        "children": {},
-                        "styles": {
-                            "background-color": "red"
-                        },
-                        "params": {
-                            "text": "return",
-                            "targetId": "form1",
-                            "action": "cancel",
-                            "actionInfo": "home"
-                        }
-                    }
-                },
+            "button6": {
+                "id": "button",
+                "children": {},
                 "styles": {
-                    "display": "flex",
-                    "flex-direction": "row",
-                    "align-items": "center",
-                    "justify-content": "space-between",
-                    "width": "300px",
-                    "margin": "auto"
+                    "background-color": "red"
                 },
-                "params": {}
+                "params": {
+                    "text": "login",
+                    "targetId": "form1",
+                    "action": "login",
+                    "actionInfo": "profile"
+                }
+            },
+            "button7": {
+                "id": "button",
+                "children": {},
+                "styles": {
+                    "background-color": "red"
+                },
+                "params": {
+                    "text": "return",
+                    "targetId": "form1",
+                    "action": "cancel",
+                    "actionInfo": "home"
+                }
             }
         },
         "signup": {
@@ -374,45 +349,31 @@
                     }
                 }
             },
-            "sectionSignup": {
-                "id": "section",
-                "children": {
-                    "button8": {
-                        "id": "button",
-                        "children": {},
-                        "styles": {
-                            "background-color": "red"
-                        },
-                        "params": {
-                            "text": "sign up",
-                            "targetId": "form2",
-                            "action": "signup",
-                            "actionInfo": "login"
-                        }
-                    },
-                    "button9": {
-                        "id": "button",
-                        "children": {},
-                        "styles": {
-                            "background-color": "red"
-                        },
-                        "params": {
-                            "text": "return",
-                            "targetId": "form2",
-                            "action": "cancel",
-                            "actionInfo": "home"
-                        }
-                    }
-                },
+            "button8": {
+                "id": "button",
+                "children": {},
                 "styles": {
-                    "display": "flex",
-                    "flex-direction": "row",
-                    "align-items": "center",
-                    "justify-content": "space-between",
-                    "width": "300px",
-                    "margin": "auto"
+                    "background-color": "red"
                 },
-                "params": {}
+                "params": {
+                    "text": "sign up",
+                    "targetId": "form2",
+                    "action": "signup",
+                    "actionInfo": "login"
+                }
+            },
+            "button9": {
+                "id": "button",
+                "children": {},
+                "styles": {
+                    "background-color": "red"
+                },
+                "params": {
+                    "text": "return",
+                    "targetId": "form2",
+                    "action": "cancel",
+                    "actionInfo": "home"
+                }
             }
         }
     }
