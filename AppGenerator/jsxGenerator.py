@@ -7,13 +7,14 @@ class JSXGenerator:
 
     @staticmethod
     def generate_jsx(data, new_path):
-        components = JSXGenerator.generate_components(data)
+        components, firebase_config = JSXGenerator.generate_components(data)
         JSXGenerator.insert_jsx(components, new_path)
+        JSXGenerator.insert_firebase_config(firebase_config, new_path)
 
     @staticmethod
     def generate_components(data):
         if len(data) <= 0:
-            return {"": ""}
+            return {"": ""}, ""
         if "app" in data:
             isNested = False
             app = data["app"]
@@ -22,14 +23,16 @@ class JSXGenerator:
             app = {"page": data}
 
         page_components = {}
+        firebase_config = ""
 
         for page, pageDetails in app.items():
             page_components[page] = []
         for page, pageDetails in app.items():
             for component_id, details in pageDetails.items():
                 component_id = f"{component_id}"
+                jsx_content, _ = JSXGenerator.generate_components(details["children"])
                 page_components[page].append(
-                    f'<{COMPONENTS_TAG[details["id"]]} key="{component_id}" className="{component_id}" params={{{details["params"]}}}  switchPage={{setCurrentPage}} nested={{{JSXGenerator.generate_components(details["children"])}}}>test button</{COMPONENTS_TAG[details["id"]]}>'
+                    f'<{COMPONENTS_TAG[details["id"]]} key="{component_id}" className="{component_id}" params={{{details["params"]}}}  stateManagers={{stateManagers}} nested={{{jsx_content}}}>test button</{COMPONENTS_TAG[details["id"]]}>'
                 )
         if isNested:
             jsx_content = "["
@@ -49,7 +52,11 @@ class JSXGenerator:
                 )
             jsx_content += "};\n"
 
-        return jsx_content
+            firebase_config = "const firebaseConfig = {\n"
+            for key, value in data["metadata"]["firebaseConfig"].items():
+                firebase_config += key + ":" + '"' + "".join(value) + '",\n'
+            firebase_config += "};\n"
+        return jsx_content, firebase_config
 
     @staticmethod
     def insert_jsx(JSXGenerator, new_path):
@@ -61,4 +68,18 @@ class JSXGenerator:
         )
         lines.insert(insert_index + 1, JSXGenerator)
         with open(jsx_path, "w") as file:
+            file.writelines(lines)
+
+    @staticmethod
+    def insert_firebase_config(firebase_config, new_path):
+        firebase_path = os.path.join(new_path, "src", "Firebase/firebase.js")
+        with open(firebase_path, "r") as file:
+            lines = file.readlines()
+        insert_index = next(
+            i
+            for i, line in enumerate(lines)
+            if "// insert firebase confiuration here" in line
+        )
+        lines.insert(insert_index + 1, firebase_config)
+        with open(firebase_path, "w") as file:
             file.writelines(lines)

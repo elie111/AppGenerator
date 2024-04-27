@@ -9,6 +9,9 @@
  * [Python Udemy Course](https://www.udemy.com/course/the-python-programming-v39-comprehensive-bootcamp/learn/lecture/22753277?start=0#overview)
  * [Figma tutorial](https://www.youtube.com/watch?v=VRf8cyeuxoo)
  * [Figma tutorial](https://www.youtube.com/watch?v=JGLfyTDgfDc)
+ * [Firebase docs](https://firebase.google.com/docs/firestore/quickstart)
+ * [Firebase docs](https://firebase.google.com/docs/web/setup)
+ * [Firebase section React course](https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/41053882#overview)
 
  ## To run the app generator:
  1) Clone project: git clone https://github.com/elie111/JenkinsHW.git
@@ -77,7 +80,7 @@ And successfully added functionality to buttons\
 Given any JSON object with any of the built in components and styles and basic logic, the app generator can create a fully functional React app.\
 Finished first stage of the project, we can build apps using the button and section components and define multiple screens, and style each component, and use basic onclick functionality.\
 The next step is to add the required pre built componets, so that we can build our app: sidebar, menu, search bar, image buttons..
-Also restructured the project file to be more comprehensible.
+Also restructured the project file to be more comprehensible.\
 **Hours worked: 4h**
 
 * **19.4:**\
@@ -130,8 +133,21 @@ Created an app with 4 pages that we switch between them via sidebar, header butt
 **Hours worked: 10h**
 
 * **25.4:**\
-in progress
+Started integrating Firebase in the project, started with few Firebase tutorials and created a Firebase account and a new Firebase project, then added to the JSON file a Firebase configuration section, and modified the script to dynamically connect the React app to the Firebase project, also planned what we need from Firebase and how can we use it in our app.\
+1) we will use Firebase auth for user authentication (loggin in, signing up)
+2) we wil use Firestore to store and fetch data (list of students, lessons ...)
+3) will eventually create few Firebase components, for example, a component that reads a list of items from the database and creates a certain component/s for the length of the list
+I implemented the auth feature, and now we can login, sign up, log out from the app. by simply giving a button the role of login/sign in/ sign up and giving it a form as a target so it will know where to find the email and password (possibly in the future will add password requrement like min number of charachters ...)\
+Also started thinking of how I will use Firestore and started creating a demo database.\
+here are few images showing our list of users and the process of logging in.\
+ * [Firebase 1](Progress-Images/Firebase-1.png)
+ * [Firebase 2](Progress-Images/Firebase-2.png)
+ * [Firebase 3](Progress-Images/Firebase-3.png)
 
+**Hours worked: 10**
+
+* **26.4:**\
+In progress\
 **Hours worked: ~**
 
-**Total ammount of hours spent on the project: 100h**
+**Total ammount of hours spent on the project: 110h**

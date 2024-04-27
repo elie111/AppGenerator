@@ -1,23 +1,40 @@
-import React from 'react';
-import './Form.css';
-import { useEffect } from 'react';
+import React, { useEffect } from 'react';
+import { handleSignIn, handleSignUp } from '../../Firebase/firebase-service';
 import { useButton } from '../Button/ButtonContext';
+import './Form.css';
 
-const Form = ({ params, switchPage }) => {
+const Form = ({ params, stateManagers }) => {
     const { fields } = params;
     const { buttonState } = useButton();
+
+    function setCredentialsType(value, type) {
+        if (type === "text") {
+            stateManagers["emailState"][1](value)
+        }
+        if (type === "password") {
+            stateManagers["passwordState"][1](value)
+        }
+    }
 
     useEffect(() => {
         if (buttonState.id === params["id"]) {
             switch (buttonState.action) {
                 case 'cancel':
-                    switchPage(buttonState.info);
+                    stateManagers["currentPageState"][1](buttonState.info);
                     break;
                 case 'login':
-                    switchPage(buttonState.info);
+                    handleSignIn(stateManagers["emailState"][0], stateManagers["passwordState"][0]).then(isSuccessful => {
+                        if (isSuccessful) {
+                            stateManagers["currentPageState"][1](buttonState.info)
+                        }
+                    })
                     break;
                 case 'signup':
-                    switchPage(buttonState.info);
+                    handleSignUp(stateManagers["emailState"][0], stateManagers["passwordState"][0]).then(isSuccessful => {
+                        if (isSuccessful) {
+                            stateManagers["currentPageState"][1](buttonState.info)
+                        }
+                    })
                     break;
 
             }
@@ -33,6 +50,7 @@ const Form = ({ params, switchPage }) => {
                     type={fieldProps.type}
                     placeholder={fieldProps.placeholder}
                     name={fieldName}
+                    onChange={(e) => setCredentialsType(e.target.value, fieldProps.type)}
                 />
             </div>
         ));

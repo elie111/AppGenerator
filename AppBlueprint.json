@@ -2,7 +2,15 @@
     "metadata": {
         "appname": "MyScheduler",
         "pages": 3,
-        "firebase": "link"
+        "firebaseConfig": {
+            "apiKey": "AIzaSyCyRavuKuxCaiUN_fVEZjcEaq_PPLqRWMw",
+            "authDomain": "appgenerator-34bf5.firebaseapp.com",
+            "projectId": "appgenerator-34bf5",
+            "storageBucket": "appgenerator-34bf5.appspot.com",
+            "messagingSenderId": "444415929111",
+            "appId": "1:444415929111:web:37cde41d843aac851c2552",
+            "measurementId": "G-91W5TTQM5M"
+        }
     },
     "app": {
         "home": {
@@ -134,6 +142,8 @@
                     "flex-direction": "row",
                     "justify-content": "space-between",
                     "align-items": "center",
+                    "position": "absolute",
+                    "top": "50%",
                     "background-color": "green",
                     "width": "100%"
                 },
@@ -171,7 +181,7 @@
                         },
                         "logout": {
                             "targetId": "app",
-                            "action": "page",
+                            "action": "logout",
                             "actionInfo": "login"
                         }
                     }
@@ -197,7 +207,10 @@
                     "background-color": "gray"
                 },
                 "params": {
-                    "title": "MySideBar",
+                    "title": {
+                        "source": "hardCoded",
+                        "value": "My Planner"
+                    },
                     "source": "providence.jpg",
                     "buttons": [
                         {
@@ -387,7 +400,7 @@
                             "text": "sign up",
                             "targetId": "form2",
                             "action": "signup",
-                            "actionInfo": "login"
+                            "actionInfo": "home"
                         }
                     },
                     "button9": {
@@ -400,7 +413,7 @@
                             "text": "return",
                             "targetId": "form2",
                             "action": "cancel",
-                            "actionInfo": "home"
+                            "actionInfo": "login"
                         }
                     }
                 },

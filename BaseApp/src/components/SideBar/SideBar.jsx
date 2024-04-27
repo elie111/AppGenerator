@@ -7,6 +7,10 @@ const SideBar = ({ params }) => {
     const [isOpen, setIsOpen] = useState(false);
     const { buttonState } = useButton();
     const toggleSidebar = () => setIsOpen(!isOpen);
+    var title = ''
+    if (params["title"]["source"]) {
+        title = params["title"]["value"]
+    }
 
     useEffect(() => {
         if (buttonState.id === "sidebar1") {
@@ -49,7 +53,7 @@ const SideBar = ({ params }) => {
                     </button>
                     <img className="sidebar-logo" src={params.source} alt="Sidebar Header" />
                 </div>
-                <h1>{params.title}</h1>
+                <h1>{title}</h1>
             </div>
             {renderButtons()}
         </div>

@@ -10,15 +10,33 @@ import ImageButton from '../components/ImageButton/ImageButton';
 import Section from '../components/Section/Section';
 import SideBar from '../components/SideBar/SideBar';
 import Text from '../components/Text/Text';
+import { logout } from '../Firebase/firebase-service'
 import './App.css';
 import './GeneratedStyles.css';
+
 function App() {
-  const [currentPage, setCurrentPage] = useState("home");
+  const [currentPage, setCurrentPage] = useState("login");
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
   const { buttonState } = useButton();
 
+  const stateManagers = {
+    "currentPageState": [currentPage, setCurrentPage],
+    "emailState": [email, setEmail],
+    "passwordState": [password, setPassword],
+  }
+
   useEffect(() => {
-    if (buttonState.id === "app" && buttonState.action === "page") {
-      setCurrentPage(buttonState.info);
+    if (buttonState.id === "app") {
+      switch (buttonState.action) {
+        case "page":
+          setCurrentPage(buttonState.info);
+          break;
+        case "logout":
+          logout();
+          setCurrentPage(buttonState.info);
+          break;
+      }
     }
   }, [buttonState]);
 
