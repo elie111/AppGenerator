@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './Card.css';
+import styles from './Card.module.css';
 import ImageButton from '../ImageButton/ImageButton';
 
 const Card = ({ params, className }) => {
@@ -29,30 +29,30 @@ const Card = ({ params, className }) => {
 
     return (
         <div>
-            {isExpanded && <div className="background-blur" onClick={handleClose}></div>}
+            {isExpanded && <div className={styles.backgroundBlur} onClick={handleClose}></div>}
 
             <div
-                className={`card ${isExpanded ? 'expanded' : ''} ${className}`}
+                className={`${styles.card} ${isExpanded ? styles.expanded : ''} ${className}`}
                 onClick={isExpanded ? undefined : toggleExpand}
                 onKeyDown={handleKeyDown}
                 tabIndex="0" // Make it focusable to detect keyboard events
             >
-                <div className="card-header">
-                    <ImageButton params={params} alt="Profile" className="profile-pic" />
+                <div className={styles.cardHeader}>
+                    <ImageButton params={params} alt="Profile" className="profilePic" />
                     <h2>{params["info"]["name"]}</h2>
                 </div>
-                <div className="card-info">
+                <div className={styles.cardInfo}>
                     <p>{params["info"]["time"]}</p>
                     <p>{params["info"]["location"]}</p>
                 </div>
-                <div className="zoom-link-container" onClick={() => copyToClipboard(params["info"]["zoomLink"])}>
+                <div className={styles.zoomLinkContainer} onClick={() => copyToClipboard(params["info"]["zoomLink"])}>
                     <span>Join Zoom Meeting</span>
-                    <img src="icons8-copy-24.png" alt="Copy" className="copy-icon"/>
+                    <img src="icons8-copy-24.png" alt="Copy" className={styles.copyIcon}/>
                 </div>
                 {isExpanded && (<>
-                    <div className="card-expanded-content">
+                    <div className={styles.cardExpandedContent}>
                         <p>{params["info"]["description"]}</p>
-                        <button className="close-button" onClick={handleClose}>X</button>
+                        <button className={styles.closeButton} onClick={handleClose}>X</button>
                     </div>
                 </>)}
             </div>

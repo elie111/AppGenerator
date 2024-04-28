@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './SideBar.css';
+import styles from './SideBar.module.css';
 import Button from '../Button/Button';
 import { useButton } from '../Button/ButtonContext';
 
@@ -23,7 +23,7 @@ const SideBar = ({ params }) => {
             const buttons = Object.entries(buttonGroup).map(([key, button]) => {
                 if (button.targetId) {
                     return (
-                        <Button key={key} className='sidebar-button' params={button}>
+                        <Button key={key} className="sidebarButton" params={button}>
                             {key}
                         </Button>
                     );
@@ -35,7 +35,7 @@ const SideBar = ({ params }) => {
             const filteredButtons = buttons.filter(Boolean);
             if (filteredButtons.length > 0) {
                 return (
-                    <div key={index} className="menu-section">
+                    <div key={index} className={styles.menuSection}>
                         {filteredButtons}
                     </div>
                 );
@@ -45,13 +45,13 @@ const SideBar = ({ params }) => {
     };
 
     return (
-        <div className={`sidebar ${isOpen ? 'open' : 'closed'}`}>
-            <div className="sidebar-header">
-                <div className='header-row-1'>
-                    <button className="close-button-sdidebar" onClick={toggleSidebar}>
+        <div className={`${styles.sidebar} ${isOpen ? styles.open : styles.closed}`}>
+            <div className={styles.sidebarHeader}>
+                <div className={styles.headerRow1}>
+                    <button className={styles.closeButtonSidebar} onClick={toggleSidebar}>
                         {isOpen ? 'Close' : 'Menu'}
                     </button>
-                    <img className="sidebar-logo" src={params.source} alt="Sidebar Header" />
+                    <img className={styles.sidebarLogo} src={params.source} alt="Sidebar Header" />
                 </div>
                 <h1>{title}</h1>
             </div>

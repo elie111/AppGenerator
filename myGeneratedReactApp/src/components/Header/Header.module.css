@@ -1,0 +1,44 @@
+.headerMain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.leftButtonsContainer {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.leftButtons {
+    justify-content: flex-start;
+    width: 70px;
+    height: 90%;
+    border-radius: 10px;
+    background-color: antiquewhite;
+}
+
+.headerName {
+    flex-grow: 1;
+    justify-content: center;
+    text-align: center;
+}
+
+.profilePicture {
+    justify-content: flex-end;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.profilePicture img {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+}

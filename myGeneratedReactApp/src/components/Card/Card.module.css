@@ -1,0 +1,130 @@
+/* Card.css */
+.card {
+    border: 1px solid #ddd;
+    /* Lighter border */
+    border-radius: 12px;
+    /* Rounded corners */
+    padding: 16px;
+    width: 300px;
+    /* Default width */
+    transition: transform 0.3s, width 0.3s, height 0.3s;
+    position: relative;
+    background: white;
+    cursor: pointer;
+    outline: none;
+    /* Remove focus outline */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 8px;
+    color: #333;
+    /* Dark gray text for better readability */
+    pointer-events: auto;
+}
+
+
+.card.expanded {
+    position: fixed;
+    top: 10%;
+    left: 10%;
+    right: 10%;
+    bottom: 10%;
+    width: auto;
+    height: auto;
+    z-index: 10;
+    transform: scale(1.1);
+    overflow-y: auto;
+    /* Enable scrolling for longer content */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* More pronounced shadow for focus */
+}
+
+.profilePic {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    object-fit: cover;
+    /* Ensure the image covers the space without distortion */
+}
+
+.cardHeader {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.cardInfo {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.cardExpandedContent {
+    margin-top: 20px;
+    padding: 20px;
+    /* More padding in expanded mode */
+    background: #f8f8f8;
+    /* Slightly off-white background for the content area */
+    border-radius: 8px;
+    /* Consistent with card style */
+    width: 100%;
+}
+
+.backgroundBlur {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Semi-transparent black background */
+    z-index: 5;
+}
+
+.closeButton {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border: none;
+    background: #ff6347;
+    /* Tomato red for visibility */
+    color: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.closeButton:hover {
+    background: #e75342;
+    /* Darker shade on hover */
+}
+
+.zoomLinkContainer {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 8px;
+    background-color: #f0f0f0;
+    /* Light gray background to highlight the area */
+    border-radius: 6px;
+    margin-top: 10px;
+}
+
+.zoomLinkContainer:hover {
+    background-color: #e0e0e0;
+    /* Slightly darker on hover to indicate interactivity */
+}
+
+.copyIcon {
+    margin-left: 10px;
+    width: 20px;
+    /* Adjust size accordingly */
+    height: 20px;
+}

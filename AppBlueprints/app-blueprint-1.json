@@ -1,0 +1,418 @@
+{
+    "metadata": {
+        "appname": "MyScheduler",
+        "pages": 3,
+        "firebaseConfig": {
+            "apiKey": "AIzaSyCyRavuKuxCaiUN_fVEZjcEaq_PPLqRWMw",
+            "authDomain": "appgenerator-34bf5.firebaseapp.com",
+            "projectId": "appgenerator-34bf5",
+            "storageBucket": "appgenerator-34bf5.appspot.com",
+            "messagingSenderId": "444415929111",
+            "appId": "1:444415929111:web:37cde41d843aac851c2552",
+            "measurementId": "G-91W5TTQM5M"
+        }
+    },
+    "app": {
+        "home": {
+            "header1": {
+                "id": "header",
+                "children": {},
+                "styles": {
+                    "background-color": "blue",
+                    "color": "white"
+                },
+                "params": {
+                    "id": "header1",
+                    "title": "MyApp",
+                    "source": "spongy.jpg",
+                    "buttons": {
+                        "sidebar": {
+                            "targetId": "sidebar1",
+                            "action": "toggleSideBar",
+                            "actionInfo": ""
+                        },
+                        "logout": {
+                            "targetId": "app",
+                            "action": "page",
+                            "actionInfo": "login"
+                        }
+                    },
+                    "targetId": "dropdown1",
+                    "action": "toggle",
+                    "actionInfo": ""
+                }
+            },
+            "sidebar1": {
+                "id": "sidebar",
+                "children": {},
+                "styles": {
+                    "position": "relative",
+                    "z-index": "3",
+                    "background-color": "gray"
+                },
+                "params": {
+                    "id": "sidebar1",
+                    "title": "MySideBar",
+                    "source": "providence.jpg",
+                    "buttons": [
+                        {
+                            "home": {
+                                "targetId": "app",
+                                "action": "page",
+                                "actionInfo": "home"
+                            }
+                        },
+                        {},
+                        {},
+                        {
+                            "profile": {
+                                "targetId": "app",
+                                "action": "page",
+                                "actionInfo": "profile"
+                            },
+                            "settings": {
+                                "targetId": "app",
+                                "action": "page",
+                                "actionInfo": "login"
+                            }
+                        }
+                    ]
+                }
+            },
+            "verticalLayout1": {
+                "id": "verticalLayout",
+                "children": {
+                    "card1": {
+                        "id": "card",
+                        "children": {},
+                        "styles": {},
+                        "params": {
+                            "source": "spongy.jpg",
+                            "info": {
+                                "name": "elie",
+                                "time": "1/5/2024",
+                                "location": "zoom",
+                                "zoomLink": "zoom.com",
+                                "description": "math class"
+                            },
+                            "targetId": "app-test",
+                            "action": "page",
+                            "actionInfo": "profile"
+                        }
+                    },
+                    "card2": {
+                        "id": "card",
+                        "children": {},
+                        "styles": {},
+                        "params": {
+                            "source": "spongy.jpg",
+                            "info": {
+                                "name": "roi",
+                                "time": "1/5/2024",
+                                "location": "zoom",
+                                "zoomLink": "zoom.com",
+                                "description": "math class"
+                            },
+                            "targetId": "app-test",
+                            "action": "page",
+                            "actionInfo": "profile"
+                        }
+                    },
+                    "card3": {
+                        "id": "card",
+                        "children": {},
+                        "styles": {},
+                        "params": {
+                            "source": "spongy.jpg",
+                            "info": {
+                                "name": "david",
+                                "time": "1/5/2024",
+                                "location": "zoom",
+                                "zoomLink": "zoom.com",
+                                "description": "math class"
+                            },
+                            "targetId": "app-test",
+                            "action": "page",
+                            "actionInfo": "profile"
+                        }
+                    }
+                },
+                "styles": {
+                    "background-color": "green",
+                    "width": "100%"
+                },
+                "params": {}
+            },
+            "imagebutton1": {
+                "id": "imagebutton",
+                "children": {},
+                "styles": {
+                    "border": "1px solid black"
+                },
+                "params": {
+                    "source": "spongy.jpg",
+                    "alink": "https://example.com",
+                    "targetId": "app",
+                    "action": "page",
+                    "actionInfo": "profile"
+                }
+            },
+            "dropdown1": {
+                "id": "dropdown",
+                "children": {},
+                "styles": {},
+                "params": {
+                    "buttons": {
+                        "settings": {
+                            "targetId": "app",
+                            "action": "page",
+                            "actionInfo": "home"
+                        },
+                        "account": {
+                            "targetId": "app",
+                            "action": "page",
+                            "actionInfo": "signup"
+                        },
+                        "logout": {
+                            "targetId": "app",
+                            "action": "logout",
+                            "actionInfo": "login"
+                        }
+                    }
+                }
+            }
+        },
+        "profile": {
+            "header2": {
+                "id": "header",
+                "children": {},
+                "styles": {
+                    "background-color": "coral",
+                    "color": "navy"
+                },
+                "params": {}
+            },
+            "sidebar2": {
+                "id": "sidebar",
+                "children": {},
+                "styles": {
+                    "position": "relative",
+                    "z-index": "3",
+                    "background-color": "gray"
+                },
+                "params": {
+                    "title": {
+                        "source": "hardCoded",
+                        "value": "My Planner"
+                    },
+                    "source": "providence.jpg",
+                    "buttons": [
+                        {
+                            "home": {
+                                "targetId": "app",
+                                "action": "page",
+                                "actionInfo": "test"
+                            }
+                        },
+                        {},
+                        {},
+                        {
+                            "profile": {
+                                "targetId": "app",
+                                "action": "page",
+                                "actionInfo": "test"
+                            },
+                            "settings": {
+                                "targetId": "app",
+                                "action": "page",
+                                "actionInfo": "profile"
+                            }
+                        }
+                    ]
+                }
+            },
+            "verticalLayout2": {
+                "id": "verticalLayout",
+                "children": {
+                    "text1": {
+                        "id": "text",
+                        "children": {},
+                        "styles": {
+                            "background-color": "transparent",
+                            "color": "navy"
+                        },
+                        "params": {
+                            "content": "this is my demo text in a navy color with transparent background"
+                        }
+                    }
+                },
+                "styles": {
+                    "background-color": "cornflowerblue"
+                },
+                "params": {}
+            },
+            "button2": {
+                "id": "button",
+                "children": {},
+                "styles": {
+                    "background-color": "red"
+                },
+                "params": {
+                    "text": "Home",
+                    "targetId": "app",
+                    "action": "page",
+                    "actionInfo": "home"
+                }
+            },
+            "imagebutton2": {
+                "id": "imagebutton",
+                "children": {},
+                "styles": {
+                    "border": "2px solid darkblue"
+                },
+                "params": {
+                    "source": "prisonMike.jpg",
+                    "alink": "https://example.com",
+                    "targetId": "app-test",
+                    "action": "page",
+                    "actionInfo": "home"
+                }
+            },
+            "button4": {
+                "id": "button",
+                "children": {},
+                "styles": {
+                    "border": "2px solid darkblue"
+                },
+                "params": {
+                    "text": "Home",
+                    "targetId": "app",
+                    "action": "page",
+                    "actionInfo": "home"
+                }
+            }
+        },
+        "login": {
+            "form1": {
+                "id": "form",
+                "children": {},
+                "styles": {},
+                "params": {
+                    "id": "form1",
+                    "role": "login",
+                    "fields": {
+                        "username": {
+                            "placeholder": "username",
+                            "type": "text"
+                        },
+                        "password": {
+                            "placeholder": "password",
+                            "type": "password"
+                        }
+                    }
+                }
+            },
+            "verticalLayoutLogin": {
+                "id": "verticalLayout",
+                "children": {
+                    "button6": {
+                        "id": "button",
+                        "children": {},
+                        "styles": {
+                            "background-color": "red"
+                        },
+                        "params": {
+                            "text": "login",
+                            "targetId": "form1",
+                            "action": "login",
+                            "actionInfo": "profile"
+                        }
+                    },
+                    "button7": {
+                        "id": "button",
+                        "children": {},
+                        "styles": {
+                            "background-color": "red"
+                        },
+                        "params": {
+                            "text": "return",
+                            "targetId": "form1",
+                            "action": "cancel",
+                            "actionInfo": "home"
+                        }
+                    }
+                },
+                "styles": {
+                    "width": "300px",
+                    "margin": "auto"
+                },
+                "params": {}
+            }
+        },
+        "signup": {
+            "form2": {
+                "id": "form",
+                "children": {},
+                "styles": {},
+                "params": {
+                    "id": "form2",
+                    "role": "signup",
+                    "fields": {
+                        "username": {
+                            "placeholder": "username",
+                            "type": "text"
+                        },
+                        "password": {
+                            "placeholder": "password",
+                            "type": "password"
+                        },
+                        "confirm password": {
+                            "placeholder": "confirm password",
+                            "type": "password"
+                        },
+                        "phone number": {
+                            "placeholder": "phone",
+                            "type": "tel"
+                        }
+                    }
+                }
+            },
+            "verticalLayoutSignup": {
+                "id": "verticalLayout",
+                "children": {
+                    "button8": {
+                        "id": "button",
+                        "children": {},
+                        "styles": {
+                            "background-color": "red"
+                        },
+                        "params": {
+                            "text": "sign up",
+                            "targetId": "form2",
+                            "action": "signup",
+                            "actionInfo": "home"
+                        }
+                    },
+                    "button9": {
+                        "id": "button",
+                        "children": {},
+                        "styles": {
+                            "background-color": "red"
+                        },
+                        "params": {
+                            "text": "return",
+                            "targetId": "form2",
+                            "action": "cancel",
+                            "actionInfo": "login"
+                        }
+                    }
+                },
+                "styles": {
+                    "width": "300px",
+                    "margin": "auto"
+                },
+                "params": {}
+            }
+        }
+    }
+}

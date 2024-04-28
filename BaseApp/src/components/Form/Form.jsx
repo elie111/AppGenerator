@@ -1,12 +1,22 @@
-import React, { useEffect } from 'react';
-import { handleSignIn, handleSignUp } from '../../Firebase/firebase-service';
+import React, { useState, useEffect } from 'react';
+import { handleSignIn, handleSignUp } from '../../Firebase/firebaseAuthService';
 import { useButton } from '../Button/ButtonContext';
-import './Form.css';
+import styles from './Form.module.css';
+import { getData } from '../../Firebase/fireStoreService';
 
 const Form = ({ params, stateManagers }) => {
     const { fields } = params;
     const { buttonState } = useButton();
-
+    const [description, setDescription] = useState("Loading description...");
+    var x = "name"
+    useEffect(() => {
+        getData("Meetings", "IzfaoPDY4laNJcjyDMTw").then(result => {
+            setDescription(result["description"] || "No description available");
+        }).catch(error => {
+            setDescription("Failed to load description");
+            console.error("Error fetching data:", error);
+        });
+    }, []); // Empty dependency array to fetch data only once on mount
     function setCredentialsType(value, type) {
         if (type === "text") {
             stateManagers["emailState"][1](value)
@@ -43,8 +53,9 @@ const Form = ({ params, stateManagers }) => {
 
     const renderFields = () => {
         return Object.entries(fields).map(([fieldName, fieldProps]) => (
-            <div key={fieldName} className="input-group">
-                <label htmlFor={fieldName}>{fieldName.charAt(0).toUpperCase() + fieldName.slice(1).replace(/_/g, ' ')}</label>
+            <div key={fieldName} className={styles.inputGroup}>
+                {description}
+                <label htmlFor={fieldName}>{fieldName.charAt(0).toUpperCase() + fieldName.slice(1).replace(/_/g, ' ')} </label>
                 <input
                     id={fieldName}
                     type={fieldProps.type}
@@ -57,7 +68,7 @@ const Form = ({ params, stateManagers }) => {
     };
 
     return (
-        <form className="dynamic-form">
+        <form className={styles.dynamicForm}>
             {renderFields()}
         </form>
     );

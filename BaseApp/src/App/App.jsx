@@ -7,10 +7,12 @@ import Form from '../components/Form/Form';
 import Header from '../components/Header/Header';
 import Image from '../components/Image/Image';
 import ImageButton from '../components/ImageButton/ImageButton';
-import Section from '../components/Section/Section';
+import DynamicLayout from '../components/Layout/DynamicLayout/DynamicLayout';
+import VerticalLayout from '../components/Layout/VerticalLayout/VerticalLayout';
+import HorizentalLayout from '../components/Layout/HorizentalLayout/HorizentalLayout';
 import SideBar from '../components/SideBar/SideBar';
 import Text from '../components/Text/Text';
-import { logout } from '../Firebase/firebase-service'
+import { handleLogout } from '../Firebase/firebaseAuthService'
 import './App.css';
 import './GeneratedStyles.css';
 
@@ -33,7 +35,7 @@ function App() {
           setCurrentPage(buttonState.info);
           break;
         case "logout":
-          logout();
+          handleLogout();
           setCurrentPage(buttonState.info);
           break;
       }

@@ -1,6 +1,8 @@
 COMPONENTS_TAG = {
     "button": "Button",
-    "section": "Section",
+    "dynamicLayout": "DynamicLayout",
+    "verticalLayout": "VerticalLayout",
+    "horizentalLayout": "HorizentalLayout",
     "text": "Text",
     "imagebutton": "ImageButton",
     "header": "Header",

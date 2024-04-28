@@ -1,5 +1,6 @@
 import { Children } from 'react';
 import { useButton } from './ButtonContext';
+import styles from './Button.module.css'
 
 function Button({ className, children, params }) {
   const { triggerButton } = useButton();

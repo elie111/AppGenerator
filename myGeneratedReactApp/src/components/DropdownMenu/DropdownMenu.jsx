@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Button from '../Button/Button';
 import { useButton } from '../Button/ButtonContext';
-import './DropdownMenu.css';
+import styles from './DropdownMenu.module.css';
 
 const DropdownMenu = ({ params, className }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -24,9 +24,9 @@ const DropdownMenu = ({ params, className }) => {
     )) : null;
 
     return (
-        <div className={`dropdown ${className || ''}`}>
+        <div className={`${styles.dropdown} ${className || ''}`}>
             {isOpen && (
-                <ul className="dropdown-content">
+                <ul className={styles.dropdownContent}>
                     {menuItems}
                 </ul>
             )}

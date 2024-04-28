@@ -1,17 +1,26 @@
 from JSONHandler import JSONHandler
 from stylesGenerator import CSSGenerator
 from jsxGenerator import JSXGenerator
+import shutil
+
 
 
 def generateApp(original_path, new_path, json_path):
-    data = JSONHandler.read_json(json_path)
-    JSONHandler.copy_project_directory(original_path, new_path)
-    CSSGenerator.generate_css(data, new_path)
-    JSXGenerator.generate_jsx(data, new_path)
+    copy_project_directory(original_path, new_path)
+    status, data = JSONHandler.read_json(json_path)
+    if not status:
+        print("Error processing JSON:", data)
+    else:
+        print("Received valid data:", data)
+        CSSGenerator.generate_css(data, new_path)
+        JSXGenerator.generate_jsx(data, new_path)
 
-
+def copy_project_directory(original_path, new_path):
+    # Copy base app
+    shutil.copytree(original_path, new_path, dirs_exist_ok=True)
+    
 if __name__ == "__main__":
     original_project_path = "./BaseApp"
     new_project_path = "./myGeneratedReactApp"
-    json_file_path = "./AppBlueprint.json"
+    json_file_path = "./AppBlueprints/app-blueprint-1.json"
     generateApp(original_project_path, new_project_path, json_file_path)

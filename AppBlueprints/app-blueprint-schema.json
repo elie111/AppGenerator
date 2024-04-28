@@ -1,0 +1,55 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "properties": {
+      "metadata": {
+        "type": "object",
+        "properties": {
+          "appname": { "type": "string" },
+          "pages": { "type": "integer" },
+          "firebaseConfig": {
+            "type": "object",
+            "properties": {
+              "apiKey": { "type": "string" },
+              "authDomain": { "type": "string" },
+              "projectId": { "type": "string" },
+              "storageBucket": { "type": "string" },
+              "messagingSenderId": { "type": "string" },
+              "appId": { "type": "string" },
+              "measurementId": { "type": "string" }
+            },
+            "required": ["apiKey", "authDomain", "projectId", "storageBucket", "messagingSenderId", "appId", "measurementId"]
+          }
+        },
+        "required": ["appname", "pages", "firebaseConfig"]
+      },
+      "app": {
+        "type": "object",
+        "patternProperties": {
+          "^[a-zA-Z0-9]+$": {
+            "type": "object",
+            "properties": {
+              "id": { "type": "string" },
+              "children": {
+                "type": "object",
+                "additionalProperties": true
+              },
+              "styles": {
+                "type": "object",
+                "additionalProperties": {
+                  "type": "string"
+                }
+              },
+              "params": {
+                "type": "object",
+                "additionalProperties": true
+              }
+            },
+            "required": ["id", "children", "styles", "params"]
+          }
+        }
+      }
+    },
+    "required": ["metadata", "app"]
+  }
+  

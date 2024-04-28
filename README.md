@@ -12,6 +12,7 @@
  * [Firebase docs](https://firebase.google.com/docs/firestore/quickstart)
  * [Firebase docs](https://firebase.google.com/docs/web/setup)
  * [Firebase section React course](https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/41053882#overview)
+ * [Firestore database](https://firebase.google.com/docs/firestore/manage-data/add-data#before_you_begin)
 
  ## To run the app generator:
  1) Clone project: git clone https://github.com/elie111/JenkinsHW.git
@@ -106,9 +107,9 @@ And also continue working on the built in components, some of the issues I tried
 **Hours worked: 5h**
 
 * **22.4:**\
-Figured out a very efficient way of adding functionality to each component, which will make it much easier and smoother to add in the future other components, all components have styles, page number and nested children, but then they start to differ, each component requires different parameters, so I made Final changes to the JSON file, where we have params that allow us to send different params depending on the component. \\
+Figured out a very efficient way of adding functionality to each component, which will make it much easier and smoother to add in the future other components, all components have styles, page number and nested children, but then they start to differ, each component requires different parameters, so I made Final changes to the JSON file, where we have params that allow us to send different params depending on the component. \
 Successfully sdded the sidebar and it's now functional, only thing left is to be able to connect it to a button that can control it when it's closed and to add functionality to the sidebar buttons. Spent a lot of time debugging a react issue, when passing the setState function I got an error that it's not a function if I am passing it to more than one component. Also made plans on how to move on when it comes to styling (responsivness and nested components styles). And most importantly figured out what my approach with the buttons is going to be, buttons are basically a way to send a signal/flag to another component telling it to do something, so I also added to the button element: targetId (which component do we want to target), action (some components will have more than one action), actionInfo (more metadata about the action).\
-Started thinking on how I can achieve such a thing (probably observeable pattern).
+Started thinking on how I can achieve such a thing (probably observeable pattern).\
 **Hours worked: 9h**
 
 * **23.4:**\
@@ -129,11 +130,12 @@ Created an app with 4 pages that we switch between them via sidebar, header butt
  * [Image 4](Progress-Images/Image-4.png)
  * [Image 5](Progress-Images/Image-5.png)
 
- And started planning integrating Firebase to the App, started doing some research on how to use Firebase with React.
+ And started planning integrating Firebase to the App, started doing some research on how to use Firebase with React.\
+
 **Hours worked: 10h**
 
 * **25.4:**\
-Started integrating Firebase in the project, started with few Firebase tutorials and created a Firebase account and a new Firebase project, then added to the JSON file a Firebase configuration section, and modified the script to dynamically connect the React app to the Firebase project, also planned what we need from Firebase and how can we use it in our app.\
+Started integrating Firebase in the project, started with few Firebase tutorials and created a Firebase account and a new Firebase project, then added to the JSON file a Firebase configuration section, and modified the script to dynamically connect the React app to the Firebase project, also planned what we need from Firebase and how can we use it in our app.
 1) we will use Firebase auth for user authentication (loggin in, signing up)
 2) we wil use Firestore to store and fetch data (list of students, lessons ...)
 3) will eventually create few Firebase components, for example, a component that reads a list of items from the database and creates a certain component/s for the length of the list
@@ -144,10 +146,19 @@ here are few images showing our list of users and the process of logging in.\
  * [Firebase 2](Progress-Images/Firebase-2.png)
  * [Firebase 3](Progress-Images/Firebase-3.png)
 
-**Hours worked: 10**
+**Hours worked: 10h**\
 
 * **26.4:**\
-In progress\
-**Hours worked: ~**
+Integrated Firestore database in the project, and implemented all the needed function to upload, update, remove and get data from the firestore.\
+Also added JSON schema to validate the JSON object structure and make sure we have the required data.\
+Created 3 new componets, horizentalLayout, verticalLayout and dynamic Layout which allows us to choose how we display our components and moves all the complex css rules to the components built in styling and this way the user only has to define the basic styles such as colors, background colors, fonts, margins which a non technical person can easily do.\
+And now that I have the neccessary infrastructure, started working on the last thing that is left to do which is to define the final params list, and buttons actions list and we will have a fully functional App Gnerator, need to add in the params list to each value a path to firestore field to be able to update and fetch data, and create new button actions like update data and get data.\
 
-**Total ammount of hours spent on the project: 110h**
+**Hours worked: 10**\
+
+* **27.4:**\
+In progress\
+
+**Hours worked: ~**\
+
+**Total ammount of hours spent on the project: 120h**
