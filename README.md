@@ -101,17 +101,20 @@ Started working on the next component which is the sidebar.\
 I reached a point in the project where I am struggling a little bit with React, like in the sidebar, I am not sure for example how to add the button when the sidebar is closed, so I watched few more deep dive sections in React mainly focused on React hooks such as useState and useEffect,  and also found a python Udemy course and watched few important sections.
  * [React Udemy Course](https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/25595350?start=0#overview)
  * [Python Udemy Course](https://www.udemy.com/course/the-python-programming-v39-comprehensive-bootcamp/learn/lecture/22753277?start=0#overview)
+   
 **Hours worked: 5h**
 
 * **21.4:**\
 Added a very important feature, nested components, it will allow us to divide the app to different section within section and since our header and sidebar and card components are going to be limited (the structure predefined) nested components will allow the user with some extra effort to build their own header and sidebar, by using buttons and images and sections and texts. Also made almost Final JSON adjustments to pass logic via parameters more easily, only thing left to modify is probably the pages structure.\\
-And also continue working on the built in components, some of the issues I tried to solve: how will a button function? what is his role? and how to customize our headers and sidebar components.\
+And also continue working on the built in components, some of the issues I tried to solve: how will a button function? what is his role? and how to customize our headers and sidebar components.
+
 **Hours worked: 5h**
 
 * **22.4:**\
 Figured out a very efficient way of adding functionality to each component, which will make it much easier and smoother to add in the future other components, all components have styles, page number and nested children, but then they start to differ, each component requires different parameters, so I made Final changes to the JSON file, where we have params that allow us to send different params depending on the component. \
 Successfully sdded the sidebar and it's now functional, only thing left is to be able to connect it to a button that can control it when it's closed and to add functionality to the sidebar buttons. Spent a lot of time debugging a react issue, when passing the setState function I got an error that it's not a function if I am passing it to more than one component. Also made plans on how to move on when it comes to styling (responsivness and nested components styles). And most importantly figured out what my approach with the buttons is going to be, buttons are basically a way to send a signal/flag to another component telling it to do something, so I also added to the button element: targetId (which component do we want to target), action (some components will have more than one action), actionInfo (more metadata about the action).\
-Started thinking on how I can achieve such a thing (probably observeable pattern).\
+Started thinking on how I can achieve such a thing (probably observeable pattern).
+
 **Hours worked: 9h**
 
 * **23.4:**\
@@ -161,7 +164,7 @@ And now that I have the neccessary infrastructure, started working on the last t
 * **27.4:**\
 Improved JSON schema to make cleared what we need to recieve, also started creating other more complex apps, and created a params class for each component since it's different for each componet and this way will make sure we send the right type and params, and now we check for each value (text, image source) whether it's hardcoded or if it's bonded with a firebase field and display it accordingly. Also added a new component edit text, which will make it easier to update a text value such as student name, meeting location, date.., before we had to create a form and associate a field with the needed firebase cell. Also started checking small missed problems, like before we didn't change the title of the app so added it to the jsx generator. Also added the ability to use imagebuttons in header and sidebar and not just buttons, also started working on adding the ability to use other types of input fields in forms like checkbox.
 
-**Hours worked: 10h**\
+**Hours worked: 10h**
 
 * **28.4:**\
 In progress\
