@@ -1,23 +1,16 @@
 .header1 {background-color: blue; color: white;}
 .sidebar1 {position: relative; z-index: 3; background-color: gray;}
-.verticalLayout1 {background-color: green; width: 100%;}
-.card1 {}
-.card2 {}
-.card3 {}
+.horizentalLayout1 {background-color: green; width: 100%;}
+.card1 {margin-left: 70px;}
+.card2 {margin-left: 70px;}
+.card3 {margin-left: 70px;}
 .imagebutton1 {border: 1px solid black;}
 .dropdown1 {}
-.header2 {background-color: coral; color: navy;}
-.sidebar2 {position: relative; z-index: 3; background-color: gray;}
-.verticalLayout2 {background-color: cornflowerblue;}
-.text1 {background-color: transparent; color: navy;}
-.button2 {background-color: red;}
-.imagebutton2 {border: 2px solid darkblue;}
-.button4 {border: 2px solid darkblue;}
 .form1 {}
-.verticalLayoutLogin {width: 300px; margin: auto;}
-.button6 {background-color: red;}
-.button7 {background-color: red;}
+.horizentalLayoutLogin {width: 300px; margin: auto;}
+.button6 {background-color: red; margin-left: 40px;}
+.button7 {background-color: red; margin-left: 150px;}
 .form2 {}
-.verticalLayoutSignup {width: 300px; margin: auto;}
-.button8 {background-color: red;}
-.button9 {background-color: red;}
+.horizentalLayoutSignup {width: 300px; margin: auto;}
+.button8 {background-color: red; margin-left: 40px;}
+.button9 {background-color: red; margin-left: 150px;}

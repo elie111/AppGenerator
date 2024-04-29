@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import styles from './SideBar.module.css';
 import Button from '../Button/Button';
-import { useButton } from '../Button/ButtonContext';
+import { useButton } from '../../AppContexts/ButtonContext';
+import SideBarParams from './SideBarParams';
+import Image from '../Image/Image';
+import Text from '../Text/Text';
 
-const SideBar = ({ params }) => {
+const SideBar = ({ params, layoutFireBase }) => {
     const [isOpen, setIsOpen] = useState(false);
     const { buttonState } = useButton();
     const toggleSidebar = () => setIsOpen(!isOpen);
-    var title = ''
-    if (params["title"]["source"]) {
-        title = params["title"]["value"]
-    }
+    const sideBarParams = new SideBarParams(params["id"], params["title"], params["image"], params["buttons"])
+    console.log("sidebar", sideBarParams.image)
 
     useEffect(() => {
         if (buttonState.id === "sidebar1") {
@@ -19,28 +20,21 @@ const SideBar = ({ params }) => {
     }, [buttonState]);
 
     const renderButtons = () => {
-        return params.buttons.map((buttonGroup, index) => {
-            const buttons = Object.entries(buttonGroup).map(([key, button]) => {
-                if (button.targetId) {
-                    return (
-                        <Button key={key} className="sidebarButton" params={button}>
-                            {key}
-                        </Button>
-                    );
-                }
-                return null; // For empty objects in the array, no button is rendered.
-            });
-
-            // Filter null entries and check if there are any buttons to render
-            const filteredButtons = buttons.filter(Boolean);
-            if (filteredButtons.length > 0) {
-                return (
-                    <div key={index} className={styles.menuSection}>
-                        {filteredButtons}
-                    </div>
-                );
+        return Object.entries(params.buttons).map(([key, button]) => {
+            const spaces = [];
+            console.log("sidebar", button)
+            for (let i = 0; i < button.newSectionSpace; i++) {
+                spaces.push(<div key={i} className={styles.singleSpace}></div>);
             }
-            return null; // Render nothing if no buttons are available in the group
+
+            return (
+                <React.Fragment key={key}>
+                    <Button className="sidebarButton" params={button} layoutFireBase={layoutFireBase}>
+                        {key}
+                    </Button>
+                    {spaces}
+                </React.Fragment>
+            );
         });
     };
 
@@ -51,11 +45,13 @@ const SideBar = ({ params }) => {
                     <button className={styles.closeButtonSidebar} onClick={toggleSidebar}>
                         {isOpen ? 'Close' : 'Menu'}
                     </button>
-                    <img className={styles.sidebarLogo} src={params.source} alt="Sidebar Header" />
+                    <Image className={styles.sidebarLogo} params={sideBarParams.image} layoutFireBase={layoutFireBase} />
                 </div>
-                <h1>{title}</h1>
+                <Text tag="h1" params={sideBarParams.title} layoutFireBase={layoutFireBase}></Text>
             </div>
-            {renderButtons()}
+            <div className={styles.buttonsContainer}>
+                {renderButtons()}
+            </div>
         </div>
     );
 };

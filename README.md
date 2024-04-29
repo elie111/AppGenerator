@@ -161,7 +161,7 @@ And now that I have the neccessary infrastructure, started working on the last t
 * **27.4:**\
 Improved JSON schema to make cleared what we need to recieve, also started creating other more complex apps, and created a params class for each component since it's different for each componet and this way will make sure we send the right type and params, and now we check for each value (text, image source) whether it's hardcoded or if it's bonded with a firebase field and display it accordingly. Also added a new component edit text, which will make it easier to update a text value such as student name, meeting location, date.., before we had to create a form and associate a field with the needed firebase cell. Also started checking small missed problems, like before we didn't change the title of the app so added it to the jsx generator. Also added the ability to use imagebuttons in header and sidebar and not just buttons, also started working on adding the ability to use other types of input fields in forms like checkbox.
 
-**Hours worked: 10h**\
+**Hours worked: 10h**
 
 * **28.4:**\
 In progress\

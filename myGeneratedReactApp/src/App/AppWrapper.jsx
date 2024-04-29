@@ -1,14 +1,18 @@
 // AppWrapper.js
 import React from 'react';
 import App from './App';
-import { ButtonProvider } from '../components/Button/ButtonContext';
+import { ButtonProvider } from '../AppContexts/ButtonContext';
+import { RefreshProvider } from '../AppContexts/RefreshContext';
 
 function AppWrapper() {
-  return (
-    <ButtonProvider>
-      <App />
-    </ButtonProvider>
-  );
+    return (
+        <RefreshProvider>
+            <ButtonProvider>
+                <App />
+            </ButtonProvider>
+        </RefreshProvider>
+
+    );
 }
 
 export default AppWrapper;

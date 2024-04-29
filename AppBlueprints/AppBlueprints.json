@@ -1,6 +1,6 @@
 {
     "metadata": {
-        "appname": "MyScheduler",
+        "appName": "MyScheduler",
         "firebaseConfig": {
             "apiKey": "AIzaSyCyRavuKuxCaiUN_fVEZjcEaq_PPLqRWMw",
             "authDomain": "appgenerator-34bf5.firebaseapp.com",
@@ -12,239 +12,459 @@
         }
     },
     "app": {
-        "app": {
-            "header": {
-                "id": "header",
-                "styles": {
-                    "background-color": "#008080",
-                    "color": "black"
-                },
+        "home": {
+            "header1": {
+                "tag": "header",
                 "children": {},
+                "styles": {
+                    "background-color": "blue",
+                    "color": "white"
+                },
                 "params": {
-                    "id": "header",
-                    "title": "MyScheduler",
+                    "id": "header1",
+                    "title": {
+                        "id": "headerText",
+                        "source": "none",
+                        "value": "MyApp"
+                    },
+                    "profileImage": {
+                        "id": "profileImage",
+                        "targetId": "dropdown1",
+                        "action": "toggle",
+                        "actionInfo": "",
+                        "source": "none",
+                        "value": "prisonMike.jpg"
+                    },
                     "buttons": {
                         "sidebar": {
-                            "type": "image",
-                            "imageSource": "more.png",
-                            "targetId": "sidebar",
+                            "id": "sidebarButton",
+                            "targetId": "sidebar1",
                             "action": "toggleSideBar",
-                            "actionInfo": ""
-                        }
-                    },
-                    "imageSource": "spongy.jpg",
-                    "targetId": "dropdown",
-                    "action": "toggleMenu",
-                    "actionInfo": ""
-                }
-            },
-            "sidebar": {
-                "id": "sidebar",
-                "styles": {
-                    "background-color": "#424242"
-                },
-                "children": {},
-                "params": {
-                    "id": "header",
-                    "buttons": {
-                        "home": {
-                            "value": "home",
-                            "targetId": "app",
-                            "action": "switchScreen",
-                            "actionInfo": "home"
-                        },
-                        "profile": {
-                            "value": "profile",
-                            "targetId": "app",
-                            "action": "switchScreen",
-                            "actionInfo": "profile"
-                        },
-                        "space": {
-                            "spaces": 3
-                        },
-                        "logout": {
-                            "value": "logout",
-                            "targetId": "app",
-                            "action": "logout",
-                            "actionInfo": ""
-                        }
-                    }
-                }
-            }
-        },
-        "welcome": {
-            "verticalLayoutWelcome": {
-                "id": "verticalLayout",
-                "styles": {
-                    "background-color": "#faf0e6",
-                    "width": "100%",
-                    "height": "100%"
-                },
-                "children": {
-                    "image": {
-                        "id": "image",
-                        "styles": {
-                            "width": "500px",
-                            "height": "500px",
-                            "object-fit": "cover"
-                        },
-                        "children": {},
-                        "params": {
-                            "imageSource": "teacherLogo.jpeg"
-                        }
-                    },
-                    "text": {
-                        "id": "text",
-                        "styles": {
-                            "color": "#537d99"
-                        },
-                        "children": {},
-                        "params": {
-                            "value": "Welcom to MyScheduler, an app to meet with your teache and have private lessons."
-                        }
-                    },
-                    "horizentalLayoutWelcome": {
-                        "id": "horizentalLayout",
-                        "styles": {
-                            "width": "300px",
-                            "margin": "auto"
-                        },
-                        "children": {
-                            "buttonLoginWelcome": {
-                                "id": "button",
-                                "styles": {
-                                    "background": "linear-gradient(to bottom right, #EF4765, #FF9A5A)",
-                                    "border": 0,
-                                    "border-radius": "12px",
-                                    "color": "#FFFFFF",
-                                    "transition": "box-shadow .2s ease-in-out",
-                                    "touch-action": "manipulation",
-                                    "white-space": "nowrap"
-                                },
-                                "children": {},
-                                "params": {
-                                    "value": "login",
-                                    "targetId": "app",
-                                    "action": "switchScreen",
-                                    "actionInfo": "login"
-                                }
-                            },
-                            "signupWelcome": {
-                                "id": "button",
-                                "styles": {
-                                    "background": "linear-gradient(to bottom right, #EF4765, #FF9A5A)",
-                                    "border": 0,
-                                    "border-radius": "12px",
-                                    "color": "#FFFFFF",
-                                    "transition": "box-shadow .2s ease-in-out",
-                                    "touch-action": "manipulation",
-                                    "white-space": "nowrap"
-                                },
-                                "children": {},
-                                "params": {
-                                    "value": "already a user?",
-                                    "targetId": "app",
-                                    "action": "switchScreen",
-                                    "actionInfo": "signup"
-                                }
+                            "actionInfo": "",
+                            "text": {
+                                "id": "sideBarText",
+                                "source": "none",
+                                "value": "Menu"
                             }
                         },
-                        "params": {}
+                        "logout": {
+                            "id": "sidebarButtonlogout",
+                            "targetId": "app",
+                            "action": "logout",
+                            "actionInfo": "",
+                            "text": {
+                                "id": "sideBarLogoutText",
+                                "source": "none",
+                                "value": "Logout"
+                            }
+                        }
+                    }
+                }
+            },
+            "sidebar1": {
+                "tag": "sideBar",
+                "children": {},
+                "styles": {
+                    "position": "relative",
+                    "z-index": "3",
+                    "background-color": "gray"
+                },
+                "params": {
+                    "id": "sidebar1",
+                    "title": {
+                        "id": "sidebartitle",
+                        "source": "none",
+                        "value": "My Planner"
+                    },
+                    "image": {
+                        "id": "imageSidebar",
+                        "source": "none",
+                        "value": "providence.jpg"
+                    },
+                    "buttons": {
+                        "home": {
+                            "id": "homeButton",
+                            "targetId": "app",
+                            "action": "page",
+                            "actionInfo": "home",
+                            "text": {
+                                "id": "homeText",
+                                "source": "none",
+                                "value": "home"
+                            },
+                            "newSectionSpace": 1
+                        },
+                        "profile": {
+                            "id": "profileButton",
+                            "targetId": "app",
+                            "action": "page",
+                            "actionInfo": "home",
+                            "text": {
+                                "id": "profileText",
+                                "source": "none",
+                                "value": "profile"
+                            },
+                            "newSectionSpace": 2
+                        },
+                        "settings": {
+                            "id": "settingsButton",
+                            "targetId": "app",
+                            "action": "page",
+                            "actionInfo": "login",
+                            "text": {
+                                "id": "settingsText",
+                                "source": "none",
+                                "value": "settings"
+                            },
+                            "newSectionSpace": 0
+                        }
+                    }
+                }
+            },
+            "horizentalLayout1": {
+                "tag": "horizentalLayout",
+                "children": {
+                    "card1": {
+                        "tag": "card",
+                        "children": {},
+                        "styles": {
+                            "margin-left": "70px"
+                        },
+                        "params": {
+                            "id": "card1",
+                            "image": {
+                                "id": "imagecard",
+                                "source": "none",
+                                "value": "spongy.jpg"
+                            },
+                            "cardId": {
+                                "id": "cardId",
+                                "source": "none",
+                                "value": "elie"
+                            },
+                            "shortDescription": {
+                                "id": "shortDescription",
+                                "source": "none",
+                                "value": "tomorrow"
+                            },
+                            "longDescription": {
+                                "id": "longDescription",
+                                "source": "none",
+                                "value": "math class"
+                            }
+                        }
+                    },
+                    "card2": {
+                        "tag": "card",
+                        "children": {},
+                        "styles": {
+                            "margin-left": "70px"
+                        },
+                        "params": {
+                            "id": "card2",
+                            "image": {
+                                "id": "shortDescription",
+                                "source": "none",
+                                "value": "spongy.jpg"
+                            },
+                            "cardId": {
+                                "id": "shortDescription",
+                                "source": "none",
+                                "value": "Roi"
+                            },
+                            "shortDescription": {
+                                "id": "shortDescription",
+                                "source": "none",
+                                "value": "tomorrow"
+                            },
+                            "longDescription": {
+                                "id": "shortDescription",
+                                "source": "none",
+                                "value": "graphics class"
+                            }
+                        }
+                    },
+                    "card3": {
+                        "tag": "card",
+                        "children": {},
+                        "styles": {
+                            "margin-left": "70px"
+                        },
+                        "params": {
+                            "id": "card3",
+                            "image": {
+                                "id": "shortDescription",
+                                "source": "none",
+                                "value": "spongy.jpg"
+                            },
+                            "cardId": {
+                                "id": "shortDescription",
+                                "source": "none",
+                                "value": "David"
+                            },
+                            "shortDescription": {
+                                "id": "shortDescription",
+                                "source": "none",
+                                "value": "tomorrow"
+                            },
+                            "longDescription": {
+                                "id": "shortDescription",
+                                "source": "none",
+                                "value": "algorithms class"
+                            }
+                        }
                     }
                 },
-                "params": {}
+                "styles": {
+                    "background-color": "green",
+                    "width": "100%"
+                },
+                "params": {
+                    "id": "shortDescription",
+                    "collection": "users",
+                    "document": "2pXmQQzAjrf83OREczSzDB8lZQA3",
+                    "loop": "false",
+                    "condition": {
+                        "isConditional": "false",
+                        "showWhen": [
+                            "username",
+                            "equals",
+                            "elie"
+                        ]
+                    }
+                }
+            },
+            "imagebutton1": {
+                "tag": "imageButton",
+                "children": {},
+                "styles": {
+                    "border": "1px solid black"
+                },
+                "params": {
+                    "id": "ib1",
+                    "source": "none",
+                    "value": "spongy.jpg",
+                    "targetId": "app",
+                    "action": "page",
+                    "actionInfo": "home"
+                }
+            },
+            "dropdown1": {
+                "tag": "dropdown",
+                "children": {},
+                "styles": {},
+                "params": {
+                    "id": "shortDescription",
+                    "buttons": {
+                        "settings": {
+                            "id": "ahh",
+                            "targetId": "app",
+                            "action": "page",
+                            "actionInfo": "home",
+                            "text": {
+                                "id": "shortDescription",
+                                "source": "none",
+                                "value": "settings"
+                            }
+                        },
+                        "account": {
+                            "id": "ah2h",
+                            "targetId": "app",
+                            "action": "page",
+                            "actionInfo": "signup",
+                            "text": {
+                                "id": "shortDescription",
+                                "source": "none",
+                                "value": "account"
+                            }
+                        },
+                        "logout": {
+                            "id": "ahh3",
+                            "targetId": "app",
+                            "action": "logout",
+                            "actionInfo": "home",
+                            "text": {
+                                "id": "shortDescription",
+                                "source": "none",
+                                "value": "logout"
+                            }
+                        }
+                    }
+                }
             }
         },
         "login": {
-            "verticalLayout1": {
-                "id": "verticalLayout",
-                "styles": {
-                    "width": "100%",
-                    "height": "100%",
-                    "background-color": "#faf0e6"
-                },
-                "children": {
-                    "form1": {
-                        "id": "form",
-                        "styles": {
-                            "background-color": "#008080"
+            "form1": {
+                "tag": "form",
+                "children": {},
+                "styles": {},
+                "params": {
+                    "id": "form1",
+                    "fields": {
+                        "username": {
+                            "id": "shortDescription",
+                            "name": "username",
+                            "type": "text",
+                            "source": "none",
+                            "value": ""
                         },
+                        "password": {
+                            "id": "shortDescription",
+                            "name": "password",
+                            "type": "password",
+                            "source": "none",
+                            "value": ""
+                        }
+                    }
+                }
+            },
+            "horizentalLayoutLogin": {
+                "tag": "horizentalLayout",
+                "children": {
+                    "button6": {
+                        "tag": "button",
                         "children": {},
+                        "styles": {
+                            "background-color": "red",
+                            "margin-left": "40px"
+                        },
                         "params": {
-                            "fields": {
-                                "username": {
-                                    "type": "email",
-                                    "placeholder": "username"
-                                },
-                                "password": {
-                                    "type": "password",
-                                    "placeholder": "password"
-                                },
-                                "role": {
-                                    "type": "radio",
-                                    "options": [
-                                        "teacher",
-                                        "student"
-                                    ]
-                                }
-                            }
+                            "id": "horizentalLayoutLogin",
+                            "text": {
+                                "id": "shortDescription",
+                                "source": "firebase",
+                                "value": "userId"
+                            },
+                            "targetId": "form1",
+                            "action": "login",
+                            "actionInfo": "home"
                         }
                     },
-                    "horizentalLayout1": {
-                        "id": "horizentalLayout",
+                    "button7": {
+                        "tag": "button",
+                        "children": {},
                         "styles": {
-                            "width": "300px",
-                            "margin": "auto"
+                            "background-color": "red",
+                            "margin-left": "150px"
                         },
-                        "children": {
-                            "buttonLogin": {
-                                "id": "button",
-                                "styles": {
-                                    "background": "linear-gradient(to bottom right, #EF4765, #FF9A5A)",
-                                    "border": 0,
-                                    "border-radius": "12px",
-                                    "color": "#FFFFFF",
-                                    "transition": "box-shadow .2s ease-in-out",
-                                    "touch-action": "manipulation",
-                                    "white-space": "nowrap"
-                                },
-                                "children": {},
-                                "params": {
-                                    "value": "login",
-                                    "targetId": "form1",
-                                    "action": "login",
-                                    "actionInfo": ""
-                                }
+                        "params": {
+                            "id": "sdgsdg",
+                            "text": {
+                                "id": "shortDescription",
+                                "source": "none",
+                                "value": "return"
                             },
-                            "cancelLogin": {
-                                "id": "button",
-                                "styles": {
-                                    "background": "linear-gradient(to bottom right, #EF4765, #FF9A5A)",
-                                    "border": 0,
-                                    "border-radius": "12px",
-                                    "color": "#FFFFFF",
-                                    "transition": "box-shadow .2s ease-in-out",
-                                    "touch-action": "manipulation",
-                                    "white-space": "nowrap"
-                                },
-                                "children": {},
-                                "params": {
-                                    "value": "cancel",
-                                    "targetId": "app",
-                                    "action": "switchScreen",
-                                    "actionInfo": "welcome"
-                                }
-                            }
-                        },
-                        "params": {}
+                            "targetId": "form1",
+                            "action": "cancel",
+                            "actionInfo": "home"
+                        }
                     }
                 },
-                "params": {}
+                "styles": {
+                    "width": "300px",
+                    "margin": "auto"
+                },
+                "params": {
+                    "id": "shortDescription",
+                    "collection": "users",
+                    "document": "2pXmQQzAjrf83OREczSzDB8lZQA3",
+                    "loop": "false",
+                    "condition": {
+                        "isConditional": "false",
+                        "showWhen": [
+                            "username",
+                            "equals",
+                            "elie"
+                        ]
+                    }
+                }
             }
         },
-        "signup": {},
-        "home": {},
-        "profile": {},
-        "settings": {}
+        "signup": {
+            "form2": {
+                "tag": "form",
+                "children": {},
+                "styles": {},
+                "params": {
+                    "id": "form2",
+                    "fields": {
+                        "username": {
+                            "id": "shortDescription",
+                            "name": "username",
+                            "type": "text",
+                            "source": "none",
+                            "value": ""
+                        },
+                        "password": {
+                            "id": "shortDescription",
+                            "name": "password",
+                            "type": "password",
+                            "source": "none",
+                            "value": ""
+                        }
+                    }
+                }
+            },
+            "horizentalLayoutSignup": {
+                "tag": "horizentalLayout",
+                "children": {
+                    "button8": {
+                        "tag": "button",
+                        "children": {},
+                        "styles": {
+                            "background-color": "red",
+                            "margin-left": "40px"
+                        },
+                        "params": {
+                            "id": "horizentalLayoutSignup",
+                            "text": {
+                                "source": "none",
+                                "value": "sign up"
+                            },
+                            "targetId": "form2",
+                            "action": "signup",
+                            "actionInfo": "home"
+                        }
+                    },
+                    "button9": {
+                        "tag": "button",
+                        "children": {},
+                        "styles": {
+                            "background-color": "red",
+                            "margin-left": "150px"
+                        },
+                        "params": {
+                            "id": "sdgsdsafas",
+                            "text": {
+                                "id": "shortDescription",
+                                "source": "none",
+                                "value": "return"
+                            },
+                            "targetId": "app",
+                            "action": "page",
+                            "actionInfo": "home"
+                        }
+                    }
+                },
+                "styles": {
+                    "width": "300px",
+                    "margin": "auto"
+                },
+                "params": {
+                    "id": "shortDescription",
+                    "collection": "users",
+                    "document": "2pXmQQzAjrf83OREczSzDB8lZQA3",
+                    "loop": "false",
+                    "condition": {
+                        "isConditional": "false",
+                        "showWhen": [
+                            "username",
+                            "equals",
+                            "elie"
+                        ]
+                    }
+                }
+            }
+        }
     }
 }

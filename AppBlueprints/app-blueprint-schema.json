@@ -9,11 +9,11 @@
         "metadata": {
             "type": "object",
             "required": [
-                "appname",
+                "appName",
                 "firebaseConfig"
             ],
             "properties": {
-                "appname": {
+                "appName": {
                     "type": "string"
                 },
                 "firebaseConfig": {
@@ -71,13 +71,13 @@
         "component": {
             "type": "object",
             "required": [
-                "id",
+                "tag",
                 "styles",
                 "children",
                 "params"
             ],
             "properties": {
-                "id": {
+                "tag": {
                     "type": "string",
                     "enum": [
                         "button",

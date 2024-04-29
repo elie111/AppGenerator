@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import Button from '../Button/Button';
-import { useButton } from '../Button/ButtonContext';
+import { useButton } from '../../AppContexts/ButtonContext';
 import styles from './DropdownMenu.module.css';
+import DropDownMenuParams from './DropDownnMenuParams';
 
-const DropdownMenu = ({ params, className }) => {
+const DropdownMenu = ({ params, className, layoutFireBase }) => {
     const [isOpen, setIsOpen] = useState(false);
     const { buttonState } = useButton();
 
     const toggleDropdown = () => setIsOpen(prevIsOpen => !prevIsOpen);
+    const dropDownMenuParams = new DropDownMenuParams(params["id"], params["buttons"])
 
     useEffect(() => {
         if (buttonState.id === "dropdown1" && buttonState.action === "toggle") {
@@ -15,13 +17,11 @@ const DropdownMenu = ({ params, className }) => {
         }
     }, [buttonState]);
 
-    const menuItems = params && params.buttons ? Object.entries(params.buttons).map(([buttonKey, buttonDetails]) => (
+    const menuItems = Object.entries(dropDownMenuParams.buttons).map(([buttonKey, buttonDetails]) => (
         <li key={buttonKey}>
-            <Button params={buttonDetails}>
-                {buttonKey.charAt(0).toUpperCase() + buttonKey.slice(1)} {/* Capitalize the button text */}
-            </Button>
+            <Button params={buttonDetails} layoutFireBase={layoutFireBase}></Button>
         </li>
-    )) : null;
+    ));
 
     return (
         <div className={`${styles.dropdown} ${className || ''}`}>

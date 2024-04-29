@@ -7,7 +7,7 @@
     background-color: #333;
     transition: left 0.3s;
     padding: 10px;
-    z-index: 10
+    z-index: 1001
 }
 
 .sidebar.open {
@@ -54,4 +54,13 @@
 .closeButtonSidebar {
     height: 30px;
     border-radius: 10px;
+}
+
+.singleSpace {
+    margin-bottom: 20px;
+}
+
+.buttonsContainer {
+    display: flex;
+    flex-direction: column;
 }

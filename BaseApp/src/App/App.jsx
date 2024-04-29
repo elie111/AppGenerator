@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import Button from '../components/Button/Button';
-import { useButton } from '../components/Button/ButtonContext';
+import { useButton } from '../AppContexts/ButtonContext';
 import Card from '../components/Card/Card';
 import DropdownMenu from '../components/DropdownMenu/DropdownMenu';
 import Form from '../components/Form/Form';
@@ -21,7 +21,7 @@ function App() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const { buttonState } = useButton();
-  const title = "MyReactApp";
+  var title = "MyReactApp";
   const stateManagers = {
     "currentPageState": [currentPage, setCurrentPage],
     "emailState": [email, setEmail],

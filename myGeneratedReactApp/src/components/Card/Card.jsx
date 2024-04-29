@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
 import styles from './Card.module.css';
 import ImageButton from '../ImageButton/ImageButton';
+import CardParams from './CardParams';
+import Image from '../Image/Image';
+import Text from '../Text/Text';
 
-const Card = ({ params, className }) => {
+const Card = ({ params, className, layoutFireBase }) => {
     const [isExpanded, setIsExpanded] = useState(false);
+    const cardParams = new CardParams(params["id"], params["cardId"], params["image"], params["shortDescription"], params["longDescription"]);
 
     const toggleExpand = () => {
         setIsExpanded(!isExpanded);
@@ -16,10 +20,7 @@ const Card = ({ params, className }) => {
     };
 
     const copyToClipboard = (link) => {
-        console.log("copiesd")
-        navigator.clipboard.writeText(link)
-            .then(() => alert('Zoom link copied to clipboard!'))
-            .catch(err => console.error('Failed to copy text: ', err));
+        navigator.clipboard.writeText(link);
     };
 
     const handleClose = (event) => {
@@ -38,20 +39,19 @@ const Card = ({ params, className }) => {
                 tabIndex="0" // Make it focusable to detect keyboard events
             >
                 <div className={styles.cardHeader}>
-                    <ImageButton params={params} alt="Profile" className="profilePic" />
-                    <h2>{params["info"]["name"]}</h2>
+                    <Image params={cardParams.image} layoutFireBase={layoutFireBase} className="profilePic" />
+                    <Text tag="h2" params={cardParams.cardId} layoutFireBase={layoutFireBase}></Text>
                 </div>
                 <div className={styles.cardInfo}>
-                    <p>{params["info"]["time"]}</p>
-                    <p>{params["info"]["location"]}</p>
+                    <Text tag="p" params={cardParams.shortDescription} layoutFireBase={layoutFireBase}></Text>
                 </div>
-                <div className={styles.zoomLinkContainer} onClick={() => copyToClipboard(params["info"]["zoomLink"])}>
-                    <span>Join Zoom Meeting</span>
-                    <img src="icons8-copy-24.png" alt="Copy" className={styles.copyIcon}/>
-                </div>
+                {/* <div className={styles.zoomLinkContainer} onClick={() => copyToClipboard(params["info"]["zoomLink"])}>
+                    <span>{params["info"]["zoomLink"]}</span>
+                    <img src="icons8-copy-24.png" alt="Copy" className={styles.copyIcon} />
+                </div> */}
                 {isExpanded && (<>
                     <div className={styles.cardExpandedContent}>
-                        <p>{params["info"]["description"]}</p>
+                        <Text tag="p" params={cardParams.longDescription} layoutFireBase={layoutFireBase}></Text>
                         <button className={styles.closeButton} onClick={handleClose}>X</button>
                     </div>
                 </>)}

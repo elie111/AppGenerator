@@ -55,3 +55,12 @@
     height: 30px;
     border-radius: 10px;
 }
+
+.singleSpace {
+    margin-bottom: 20px;
+}
+
+.buttonsContainer {
+    display: flex;
+    flex-direction: column;
+}

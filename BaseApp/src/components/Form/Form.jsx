@@ -1,13 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { handleSignIn, handleSignUp } from '../../Firebase/firebaseAuthService';
-import { useButton } from '../Button/ButtonContext';
+import { useButton } from '../../AppContexts/ButtonContext';
 import styles from './Form.module.css';
 import { getData } from '../../Firebase/fireStoreService';
+import FormParams from './FormParams';
 
-const Form = ({ params, stateManagers }) => {
+const Form = ({ params, stateManagers, layoutFireBase }) => {
     const { fields } = params;
     const { buttonState } = useButton();
     const [description, setDescription] = useState("Loading description...");
+    const formParams = new FormParams(params["id"], params ["inputFields"])
     var x = "name"
     useEffect(() => {
         getData("Meetings", "IzfaoPDY4laNJcjyDMTw").then(result => {
@@ -27,7 +29,7 @@ const Form = ({ params, stateManagers }) => {
     }
 
     useEffect(() => {
-        if (buttonState.id === params["id"]) {
+        if (buttonState.id === formParams["id"]) {
             switch (buttonState.action) {
                 case 'cancel':
                     stateManagers["currentPageState"][1](buttonState.info);

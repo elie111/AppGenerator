@@ -33,7 +33,7 @@ class JSXGenerator:
                 component_id = f"{component_id}"
                 jsx_content, _ = JSXGenerator.generate_components(details["children"])
                 page_components[page].append(
-                    f'<{COMPONENTS_TAG[details["id"]]} key="{component_id}" className="{component_id}" params={{{details["params"]}}}  stateManagers={{stateManagers}} nested={{{jsx_content}}}>test button</{COMPONENTS_TAG[details["id"]]}>'
+                    f'<{COMPONENTS_TAG[details["tag"]]} key="{component_id}" className="{component_id}" params={{{details["params"]}}}  stateManagers={{stateManagers}} nested={{{jsx_content}}}>test button</{COMPONENTS_TAG[details["tag"]]}>'
                 )
         if isNested:
             jsx_content = "["
@@ -73,7 +73,7 @@ class JSXGenerator:
             file.writelines(lines)
 
     @staticmethod
-    def insert_jsx(data, new_path):
+    def insert_title(data, new_path):
         # insert title name
         jsx_path = os.path.join(new_path, "src", "App/App.jsx")
         with open(jsx_path, "r") as file:
@@ -81,7 +81,7 @@ class JSXGenerator:
         insert_index = next(
             i for i, line in enumerate(lines) if "// insert title here" in line
         )
-        title = "title = " + data["metadata"]["appName"]
+        title = 'title = "' + data["metadata"]["appName"] + '"'
         lines.insert(insert_index + 1, title)
         with open(jsx_path, "w") as file:
             file.writelines(lines)
