@@ -13,6 +13,8 @@
  * [Firebase docs](https://firebase.google.com/docs/web/setup)
  * [Firebase section React course](https://www.udemy.com/course/react-the-complete-guide-incl-redux/learn/lecture/41053882#overview)
  * [Firestore database](https://firebase.google.com/docs/firestore/manage-data/add-data#before_you_begin)
+ * [JSON Schema validation tool](https://www.liquid-technologies.com/online-json-schema-validator)
+ * [icons](https://www.flaticon.com/)
 
  ## To run the app generator:
  1) Clone project: git clone https://github.com/elie111/JenkinsHW.git
@@ -130,7 +132,7 @@ Created an app with 4 pages that we switch between them via sidebar, header butt
  * [Image 4](Progress-Images/Image-4.png)
  * [Image 5](Progress-Images/Image-5.png)
 
- And started planning integrating Firebase to the App, started doing some research on how to use Firebase with React.\
+ And started planning integrating Firebase to the App, started doing some research on how to use Firebase with React.
 
 **Hours worked: 10h**
 
@@ -146,19 +148,24 @@ here are few images showing our list of users and the process of logging in.\
  * [Firebase 2](Progress-Images/Firebase-2.png)
  * [Firebase 3](Progress-Images/Firebase-3.png)
 
-**Hours worked: 10h**\
+**Hours worked: 10h**
 
 * **26.4:**\
 Integrated Firestore database in the project, and implemented all the needed function to upload, update, remove and get data from the firestore.\
 Also added JSON schema to validate the JSON object structure and make sure we have the required data.\
 Created 3 new componets, horizentalLayout, verticalLayout and dynamic Layout which allows us to choose how we display our components and moves all the complex css rules to the components built in styling and this way the user only has to define the basic styles such as colors, background colors, fonts, margins which a non technical person can easily do.\
-And now that I have the neccessary infrastructure, started working on the last thing that is left to do which is to define the final params list, and buttons actions list and we will have a fully functional App Gnerator, need to add in the params list to each value a path to firestore field to be able to update and fetch data, and create new button actions like update data and get data.\
+And now that I have the neccessary infrastructure, started working on the last thing that is left to do which is to define the final params list, and buttons actions list and we will have a fully functional App Gnerator, need to add in the params list to each value a path to firestore field to be able to update and fetch data, and create new button actions like update data and get data.
 
-**Hours worked: 10**\
+**Hours worked: 10h**
 
 * **27.4:**\
+Improved JSON schema to make cleared what we need to recieve, also started creating other more complex apps, and created a params class for each component since it's different for each componet and this way will make sure we send the right type and params, and now we check for each value (text, image source) whether it's hardcoded or if it's bonded with a firebase field and display it accordingly. Also added a new component edit text, which will make it easier to update a text value such as student name, meeting location, date.., before we had to create a form and associate a field with the needed firebase cell. Also started checking small missed problems, like before we didn't change the title of the app so added it to the jsx generator. Also added the ability to use imagebuttons in header and sidebar and not just buttons, also started working on adding the ability to use other types of input fields in forms like checkbox.
+
+**Hours worked: 10h**\
+
+* **28.4:**\
 In progress\
 
 **Hours worked: ~**\
 
-**Total ammount of hours spent on the project: 120h**
+**Total ammount of hours spent on the project: 130h**

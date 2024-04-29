@@ -9,6 +9,7 @@ class JSXGenerator:
     def generate_jsx(data, new_path):
         components, firebase_config = JSXGenerator.generate_components(data)
         JSXGenerator.insert_jsx(components, new_path)
+        JSXGenerator.insert_title(data, new_path)
         JSXGenerator.insert_firebase_config(firebase_config, new_path)
 
     @staticmethod
@@ -60,6 +61,7 @@ class JSXGenerator:
 
     @staticmethod
     def insert_jsx(JSXGenerator, new_path):
+        # insert components array
         jsx_path = os.path.join(new_path, "src", "App/App.jsx")
         with open(jsx_path, "r") as file:
             lines = file.readlines()
@@ -71,7 +73,22 @@ class JSXGenerator:
             file.writelines(lines)
 
     @staticmethod
+    def insert_jsx(data, new_path):
+        # insert title name
+        jsx_path = os.path.join(new_path, "src", "App/App.jsx")
+        with open(jsx_path, "r") as file:
+            lines = file.readlines()
+        insert_index = next(
+            i for i, line in enumerate(lines) if "// insert title here" in line
+        )
+        title = "title = " + data["metadata"]["appName"]
+        lines.insert(insert_index + 1, title)
+        with open(jsx_path, "w") as file:
+            file.writelines(lines)
+
+    @staticmethod
     def insert_firebase_config(firebase_config, new_path):
+        # insert firebase configuration
         firebase_path = os.path.join(new_path, "src", "Firebase/firebase.js")
         with open(firebase_path, "r") as file:
             lines = file.readlines()

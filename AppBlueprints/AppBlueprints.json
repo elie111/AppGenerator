@@ -1,0 +1,250 @@
+{
+    "metadata": {
+        "appname": "MyScheduler",
+        "firebaseConfig": {
+            "apiKey": "AIzaSyCyRavuKuxCaiUN_fVEZjcEaq_PPLqRWMw",
+            "authDomain": "appgenerator-34bf5.firebaseapp.com",
+            "projectId": "appgenerator-34bf5",
+            "storageBucket": "appgenerator-34bf5.appspot.com",
+            "messagingSenderId": "444415929111",
+            "appId": "1:444415929111:web:37cde41d843aac851c2552",
+            "measurementId": "G-91W5TTQM5M"
+        }
+    },
+    "app": {
+        "app": {
+            "header": {
+                "id": "header",
+                "styles": {
+                    "background-color": "#008080",
+                    "color": "black"
+                },
+                "children": {},
+                "params": {
+                    "id": "header",
+                    "title": "MyScheduler",
+                    "buttons": {
+                        "sidebar": {
+                            "type": "image",
+                            "imageSource": "more.png",
+                            "targetId": "sidebar",
+                            "action": "toggleSideBar",
+                            "actionInfo": ""
+                        }
+                    },
+                    "imageSource": "spongy.jpg",
+                    "targetId": "dropdown",
+                    "action": "toggleMenu",
+                    "actionInfo": ""
+                }
+            },
+            "sidebar": {
+                "id": "sidebar",
+                "styles": {
+                    "background-color": "#424242"
+                },
+                "children": {},
+                "params": {
+                    "id": "header",
+                    "buttons": {
+                        "home": {
+                            "value": "home",
+                            "targetId": "app",
+                            "action": "switchScreen",
+                            "actionInfo": "home"
+                        },
+                        "profile": {
+                            "value": "profile",
+                            "targetId": "app",
+                            "action": "switchScreen",
+                            "actionInfo": "profile"
+                        },
+                        "space": {
+                            "spaces": 3
+                        },
+                        "logout": {
+                            "value": "logout",
+                            "targetId": "app",
+                            "action": "logout",
+                            "actionInfo": ""
+                        }
+                    }
+                }
+            }
+        },
+        "welcome": {
+            "verticalLayoutWelcome": {
+                "id": "verticalLayout",
+                "styles": {
+                    "background-color": "#faf0e6",
+                    "width": "100%",
+                    "height": "100%"
+                },
+                "children": {
+                    "image": {
+                        "id": "image",
+                        "styles": {
+                            "width": "500px",
+                            "height": "500px",
+                            "object-fit": "cover"
+                        },
+                        "children": {},
+                        "params": {
+                            "imageSource": "teacherLogo.jpeg"
+                        }
+                    },
+                    "text": {
+                        "id": "text",
+                        "styles": {
+                            "color": "#537d99"
+                        },
+                        "children": {},
+                        "params": {
+                            "value": "Welcom to MyScheduler, an app to meet with your teache and have private lessons."
+                        }
+                    },
+                    "horizentalLayoutWelcome": {
+                        "id": "horizentalLayout",
+                        "styles": {
+                            "width": "300px",
+                            "margin": "auto"
+                        },
+                        "children": {
+                            "buttonLoginWelcome": {
+                                "id": "button",
+                                "styles": {
+                                    "background": "linear-gradient(to bottom right, #EF4765, #FF9A5A)",
+                                    "border": 0,
+                                    "border-radius": "12px",
+                                    "color": "#FFFFFF",
+                                    "transition": "box-shadow .2s ease-in-out",
+                                    "touch-action": "manipulation",
+                                    "white-space": "nowrap"
+                                },
+                                "children": {},
+                                "params": {
+                                    "value": "login",
+                                    "targetId": "app",
+                                    "action": "switchScreen",
+                                    "actionInfo": "login"
+                                }
+                            },
+                            "signupWelcome": {
+                                "id": "button",
+                                "styles": {
+                                    "background": "linear-gradient(to bottom right, #EF4765, #FF9A5A)",
+                                    "border": 0,
+                                    "border-radius": "12px",
+                                    "color": "#FFFFFF",
+                                    "transition": "box-shadow .2s ease-in-out",
+                                    "touch-action": "manipulation",
+                                    "white-space": "nowrap"
+                                },
+                                "children": {},
+                                "params": {
+                                    "value": "already a user?",
+                                    "targetId": "app",
+                                    "action": "switchScreen",
+                                    "actionInfo": "signup"
+                                }
+                            }
+                        },
+                        "params": {}
+                    }
+                },
+                "params": {}
+            }
+        },
+        "login": {
+            "verticalLayout1": {
+                "id": "verticalLayout",
+                "styles": {
+                    "width": "100%",
+                    "height": "100%",
+                    "background-color": "#faf0e6"
+                },
+                "children": {
+                    "form1": {
+                        "id": "form",
+                        "styles": {
+                            "background-color": "#008080"
+                        },
+                        "children": {},
+                        "params": {
+                            "fields": {
+                                "username": {
+                                    "type": "email",
+                                    "placeholder": "username"
+                                },
+                                "password": {
+                                    "type": "password",
+                                    "placeholder": "password"
+                                },
+                                "role": {
+                                    "type": "radio",
+                                    "options": [
+                                        "teacher",
+                                        "student"
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "horizentalLayout1": {
+                        "id": "horizentalLayout",
+                        "styles": {
+                            "width": "300px",
+                            "margin": "auto"
+                        },
+                        "children": {
+                            "buttonLogin": {
+                                "id": "button",
+                                "styles": {
+                                    "background": "linear-gradient(to bottom right, #EF4765, #FF9A5A)",
+                                    "border": 0,
+                                    "border-radius": "12px",
+                                    "color": "#FFFFFF",
+                                    "transition": "box-shadow .2s ease-in-out",
+                                    "touch-action": "manipulation",
+                                    "white-space": "nowrap"
+                                },
+                                "children": {},
+                                "params": {
+                                    "value": "login",
+                                    "targetId": "form1",
+                                    "action": "login",
+                                    "actionInfo": ""
+                                }
+                            },
+                            "cancelLogin": {
+                                "id": "button",
+                                "styles": {
+                                    "background": "linear-gradient(to bottom right, #EF4765, #FF9A5A)",
+                                    "border": 0,
+                                    "border-radius": "12px",
+                                    "color": "#FFFFFF",
+                                    "transition": "box-shadow .2s ease-in-out",
+                                    "touch-action": "manipulation",
+                                    "white-space": "nowrap"
+                                },
+                                "children": {},
+                                "params": {
+                                    "value": "cancel",
+                                    "targetId": "app",
+                                    "action": "switchScreen",
+                                    "actionInfo": "welcome"
+                                }
+                            }
+                        },
+                        "params": {}
+                    }
+                },
+                "params": {}
+            }
+        },
+        "signup": {},
+        "home": {},
+        "profile": {},
+        "settings": {}
+    }
+}

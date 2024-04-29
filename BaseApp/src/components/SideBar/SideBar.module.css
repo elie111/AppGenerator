@@ -7,7 +7,7 @@
     background-color: #333;
     transition: left 0.3s;
     padding: 10px;
-    z-index: 10
+    z-index: 1001
 }
 
 .sidebar.open {

@@ -21,7 +21,7 @@ function App() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const { buttonState } = useButton();
-
+  const title = "MyReactApp";
   const stateManagers = {
     "currentPageState": [currentPage, setCurrentPage],
     "emailState": [email, setEmail],
@@ -42,10 +42,12 @@ function App() {
     }
   }, [buttonState]);
 
+  // insert title here
   // Insert pages array here
 
   return (
     <>
+      <title>{title}</title>
       {pages[currentPage]}
     </>
   );

@@ -1,13 +1,14 @@
 COMPONENTS_TAG = {
     "button": "Button",
-    "dynamicLayout": "DynamicLayout",
-    "verticalLayout": "VerticalLayout",
-    "horizentalLayout": "HorizentalLayout",
-    "text": "Text",
-    "imagebutton": "ImageButton",
-    "header": "Header",
-    "sidebar": "SideBar",
     "card": "Card",
     "dropdown": "DropdownMenu",
-    "form": "Form"
+    "dynamicLayout": "DynamicLayout",
+    "editText": "EditText",
+    "form": "Form",
+    "header": "Header",
+    "horizentalLayout": "HorizentalLayout",
+    "imageButton": "ImageButton",
+    "sideBar": "SideBar",
+    "text": "Text",
+    "verticalLayout": "VerticalLayout",
 }
