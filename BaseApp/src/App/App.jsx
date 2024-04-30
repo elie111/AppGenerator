@@ -12,21 +12,35 @@ import VerticalLayout from '../components/Layout/VerticalLayout/VerticalLayout';
 import HorizentalLayout from '../components/Layout/HorizentalLayout/HorizentalLayout';
 import SideBar from '../components/SideBar/SideBar';
 import Text from '../components/Text/Text';
-import { handleLogout } from '../Firebase/firebaseAuthService'
+import { handleLogout } from '../Firebase/firebaseAuthService';
 import './App.css';
 import './GeneratedStyles.css';
+import { auth } from '../Firebase/firebase';
+import { onAuthStateChanged } from 'firebase/auth';
 
 function App() {
   const [currentPage, setCurrentPage] = useState("login");
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const { buttonState } = useButton();
-  var title = "MyReactApp";
+  var title = "MyScheduler"; // updated to correct initialization
   const stateManagers = {
-    "currentPageState": [currentPage, setCurrentPage],
-    "emailState": [email, setEmail],
-    "passwordState": [password, setPassword],
-  }
+    currentPageState: [currentPage, setCurrentPage],
+    emailState: [email, setEmail],
+    passwordState: [password, setPassword],
+  };
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setCurrentPage("home");
+      } else {
+        setCurrentPage("login");
+      }
+    });
+
+    return () => unsubscribe();  // Clean up the subscription
+  }, []);
 
   useEffect(() => {
     if (buttonState.id === "app") {
@@ -38,6 +52,8 @@ function App() {
           handleLogout();
           setCurrentPage(buttonState.info);
           break;
+        default:
+          break; // It's generally a good practice to have a default case in switch statements
       }
     }
   }, [buttonState]);

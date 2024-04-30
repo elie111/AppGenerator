@@ -1,3 +1,5 @@
 .dynamicSection {
     position: absolute;
+    overflow: scroll;
+    overflow-y: hidden;
 }

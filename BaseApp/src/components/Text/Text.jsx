@@ -6,7 +6,6 @@ function Text({ className, params, layoutFireBase }) {
     const [text, setText] = useState("loading ..."); // Initial text state
     const [isLoading, setIsLoading] = useState(false);
     const textParams = new TextParams(params["source"], params["value"]);
-    console.log("helper",layoutFireBase, className)
 
     useEffect(() => {
         if (textParams.source === "none") {

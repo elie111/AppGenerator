@@ -5,6 +5,7 @@ export const RefreshProvider = ({ children }) => {
     const [updated, setUpdated] = useState(false);
 
     const triggerRefresh = () => {
+        console.log("refresh brah")
         setUpdated(!updated); // Toggle to force refresh
     };
 

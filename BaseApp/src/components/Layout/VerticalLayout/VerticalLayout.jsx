@@ -26,14 +26,14 @@ function VerticalLayout({ className, nested, params }) {
 
   if (nested[""] === "") {
     return (
-      <section className={`${styles.dynamicSection} ${className}`}></section>
+      <section className={`${styles.verticalSection} ${className}`}></section>
     );
   }
 
   const childrenWithProps = addPropsToChildren(nested);
 
   return (
-    <section className={`${styles.dynamicSection} ${className}`}>
+    <section className={`${styles.verticalSection} ${className}`}>
       {childrenWithProps}
     </section>
   );

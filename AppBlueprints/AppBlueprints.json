@@ -17,8 +17,10 @@
                 "tag": "header",
                 "children": {},
                 "styles": {
-                    "background-color": "blue",
-                    "color": "white"
+                    "default": {
+                        "background-color": "blue",
+                        "color": "white"
+                    }
                 },
                 "params": {
                     "id": "header1",
@@ -65,9 +67,11 @@
                 "tag": "sideBar",
                 "children": {},
                 "styles": {
-                    "position": "relative",
-                    "z-index": "3",
-                    "background-color": "gray"
+                    "default": {
+                        "position": "relative",
+                        "z-index": "3",
+                        "background-color": "gray"
+                    }
                 },
                 "params": {
                     "id": "sidebar1",
@@ -121,174 +125,194 @@
                     }
                 }
             },
-            "horizentalLayout1": {
-                "tag": "horizentalLayout",
+            "VerticalLayout1": {
+                "tag": "verticalLayout",
+                "styles": {
+                    "default": {
+                        "background-color": "#ffc566",
+                        "width": "100vw",
+                        "height": "100vh"
+                    }
+                },
                 "children": {
-                    "card1": {
-                        "tag": "card",
-                        "children": {},
+                    "horizentalLayout1": {
+                        "tag": "horizentalLayout",
+                        "children": {
+                            "card1": {
+                                "tag": "card",
+                                "children": {},
+                                "styles": {
+                                    "default": {
+                                        "background-color": "#faf0e6",
+                                        "margin-inline": "70px",
+                                        "margin-block": "10px"
+                                    }
+                                },
+                                "params": {
+                                    "id": "card1",
+                                    "image": {
+                                        "id": "imagecard",
+                                        "source": "firebase",
+                                        "value": "profilePicture"
+                                    },
+                                    "cardId": {
+                                        "id": "cardId",
+                                        "source": "firebase",
+                                        "value": "userName"
+                                    },
+                                    "shortDescription": {
+                                        "id": "shortDescription",
+                                        "source": "firebase",
+                                        "value": "location"
+                                    },
+                                    "longDescription": {
+                                        "id": "longDescription",
+                                        "source": "firebase",
+                                        "value": "courseDescription"
+                                    }
+                                }
+                            }
+                        },
                         "styles": {
-                            "margin-left": "70px"
+                            "default": {
+                                "background-color": "#d9b99b",
+                                "margin-top": "40px",
+                                "width": "100%"
+                            }
                         },
                         "params": {
-                            "id": "card1",
-                            "image": {
-                                "id": "imagecard",
-                                "source": "none",
-                                "value": "spongy.jpg"
-                            },
-                            "cardId": {
-                                "id": "cardId",
-                                "source": "none",
-                                "value": "elie"
-                            },
-                            "shortDescription": {
-                                "id": "shortDescription",
-                                "source": "none",
-                                "value": "tomorrow"
-                            },
-                            "longDescription": {
-                                "id": "longDescription",
-                                "source": "none",
-                                "value": "math class"
+                            "id": "shortDescription",
+                            "collection": "users",
+                            "document": "2pXmQQzAjrf83OREczSzDB8lZQA3",
+                            "loop": "true",
+                            "condition": {
+                                "isConditional": "false",
+                                "showWhen": [
+                                    "",
+                                    "",
+                                    ""
+                                ]
                             }
                         }
                     },
-                    "card2": {
-                        "tag": "card",
-                        "children": {},
+                    "horizentalLayout2": {
+                        "tag": "horizentalLayout",
+                        "children": {
+                            "card1": {
+                                "tag": "card",
+                                "children": {},
+                                "styles": {
+                                    "default": {
+                                        "background-color": "#faf0e6",
+                                        "margin-inline": "70px",
+                                        "margin-block": "10px"
+                                    }
+                                },
+                                "params": {
+                                    "id": "card12",
+                                    "image": {
+                                        "id": "imagecard",
+                                        "source": "firebase",
+                                        "value": "profilePicture"
+                                    },
+                                    "cardId": {
+                                        "id": "cardId",
+                                        "source": "firebase",
+                                        "value": "userName"
+                                    },
+                                    "shortDescription": {
+                                        "id": "shortDescription",
+                                        "source": "firebase",
+                                        "value": "location"
+                                    },
+                                    "longDescription": {
+                                        "id": "longDescription",
+                                        "source": "firebase",
+                                        "value": "courseDescription"
+                                    }
+                                }
+                            }
+                        },
                         "styles": {
-                            "margin-left": "70px"
+                            "default": {
+                                "background-color": "#d9b99b",
+                                "margin-top": "40px",
+                                "width": "100%"
+                            }
                         },
                         "params": {
-                            "id": "card2",
-                            "image": {
-                                "id": "shortDescription",
-                                "source": "none",
-                                "value": "spongy.jpg"
-                            },
-                            "cardId": {
-                                "id": "shortDescription",
-                                "source": "none",
-                                "value": "Roi"
-                            },
-                            "shortDescription": {
-                                "id": "shortDescription",
-                                "source": "none",
-                                "value": "tomorrow"
-                            },
-                            "longDescription": {
-                                "id": "shortDescription",
-                                "source": "none",
-                                "value": "graphics class"
+                            "id": "shortDescription",
+                            "collection": "users",
+                            "document": "2pXmQQzAjrf83OREczSzDB8lZQA3",
+                            "loop": "true",
+                            "condition": {
+                                "isConditional": "true",
+                                "showWhen": [
+                                    "location",
+                                    "==",
+                                    "zoom"
+                                ]
                             }
                         }
                     },
-                    "card3": {
-                        "tag": "card",
+                    "dropdown1": {
+                        "tag": "dropdown",
                         "children": {},
                         "styles": {
-                            "margin-left": "70px"
+                            "default": {}
                         },
                         "params": {
-                            "id": "card3",
-                            "image": {
-                                "id": "shortDescription",
-                                "source": "none",
-                                "value": "spongy.jpg"
-                            },
-                            "cardId": {
-                                "id": "shortDescription",
-                                "source": "none",
-                                "value": "David"
-                            },
-                            "shortDescription": {
-                                "id": "shortDescription",
-                                "source": "none",
-                                "value": "tomorrow"
-                            },
-                            "longDescription": {
-                                "id": "shortDescription",
-                                "source": "none",
-                                "value": "algorithms class"
+                            "id": "shortDescription",
+                            "buttons": {
+                                "settings": {
+                                    "id": "ahh",
+                                    "targetId": "app",
+                                    "action": "page",
+                                    "actionInfo": "home",
+                                    "text": {
+                                        "id": "shortDescription",
+                                        "source": "none",
+                                        "value": "settings"
+                                    }
+                                },
+                                "account": {
+                                    "id": "ah2h",
+                                    "targetId": "app",
+                                    "action": "page",
+                                    "actionInfo": "signup",
+                                    "text": {
+                                        "id": "shortDescription",
+                                        "source": "none",
+                                        "value": "account"
+                                    }
+                                },
+                                "logout": {
+                                    "id": "ahh3",
+                                    "targetId": "app",
+                                    "action": "logout",
+                                    "actionInfo": "home",
+                                    "text": {
+                                        "id": "shortDescription",
+                                        "source": "none",
+                                        "value": "logout"
+                                    }
+                                }
                             }
                         }
                     }
                 },
-                "styles": {
-                    "background-color": "green",
-                    "width": "100%"
-                },
                 "params": {
-                    "id": "shortDescription",
-                    "collection": "users",
-                    "document": "2pXmQQzAjrf83OREczSzDB8lZQA3",
+                    "id": "vertical1",
+                    "collection": "",
+                    "document": "",
                     "loop": "false",
                     "condition": {
                         "isConditional": "false",
                         "showWhen": [
-                            "username",
-                            "equals",
-                            "elie"
+                            "",
+                            "",
+                            ""
                         ]
-                    }
-                }
-            },
-            "imagebutton1": {
-                "tag": "imageButton",
-                "children": {},
-                "styles": {
-                    "border": "1px solid black"
-                },
-                "params": {
-                    "id": "ib1",
-                    "source": "none",
-                    "value": "spongy.jpg",
-                    "targetId": "app",
-                    "action": "page",
-                    "actionInfo": "home"
-                }
-            },
-            "dropdown1": {
-                "tag": "dropdown",
-                "children": {},
-                "styles": {},
-                "params": {
-                    "id": "shortDescription",
-                    "buttons": {
-                        "settings": {
-                            "id": "ahh",
-                            "targetId": "app",
-                            "action": "page",
-                            "actionInfo": "home",
-                            "text": {
-                                "id": "shortDescription",
-                                "source": "none",
-                                "value": "settings"
-                            }
-                        },
-                        "account": {
-                            "id": "ah2h",
-                            "targetId": "app",
-                            "action": "page",
-                            "actionInfo": "signup",
-                            "text": {
-                                "id": "shortDescription",
-                                "source": "none",
-                                "value": "account"
-                            }
-                        },
-                        "logout": {
-                            "id": "ahh3",
-                            "targetId": "app",
-                            "action": "logout",
-                            "actionInfo": "home",
-                            "text": {
-                                "id": "shortDescription",
-                                "source": "none",
-                                "value": "logout"
-                            }
-                        }
                     }
                 }
             }
@@ -297,7 +321,9 @@
             "form1": {
                 "tag": "form",
                 "children": {},
-                "styles": {},
+                "styles": {
+                    "default": {}
+                },
                 "params": {
                     "id": "form1",
                     "fields": {
@@ -305,35 +331,63 @@
                             "id": "shortDescription",
                             "name": "username",
                             "type": "text",
-                            "source": "none",
-                            "value": ""
+                            "source": "firebase",
+                            "value": "authEmail"
                         },
                         "password": {
                             "id": "shortDescription",
                             "name": "password",
                             "type": "password",
-                            "source": "none",
-                            "value": ""
+                            "source": "firebase",
+                            "value": "authPassword"
+                        }
+                        },
+                        "userName": {
+                            "id": "shortDescription",
+                            "name": "userName",
+                            "type": "text",
+                            "source": "firebase",
+                            "value": "userName"
+                        }
+                        },
+                        "location": {
+                            "id": "shortDescription",
+                            "name": "location",
+                            "type": "text",
+                            "source": "firebase",
+                            "value": "location"
                         }
                     }
                 }
             },
             "horizentalLayoutLogin": {
                 "tag": "horizentalLayout",
+                "styles": {
+                    "default": {
+                        "width": "300px",
+                        "margin": "auto"
+                    },
+                    "500px": {
+                        "justify-content": "center",
+                        "width": "100vw"
+                    }
+                },
                 "children": {
                     "button6": {
                         "tag": "button",
                         "children": {},
                         "styles": {
-                            "background-color": "red",
-                            "margin-left": "40px"
+                            "default": {
+                                "background-color": "red",
+                                "margin-left": "40px"
+                            }
                         },
                         "params": {
                             "id": "horizentalLayoutLogin",
                             "text": {
                                 "id": "shortDescription",
-                                "source": "firebase",
-                                "value": "userId"
+                                "source": "none",
+                                "value": "Login"
                             },
                             "targetId": "form1",
                             "action": "login",
@@ -344,8 +398,10 @@
                         "tag": "button",
                         "children": {},
                         "styles": {
-                            "background-color": "red",
-                            "margin-left": "150px"
+                            "default": {
+                                "background-color": "red",
+                                "margin-left": "150px"
+                            }
                         },
                         "params": {
                             "id": "sdgsdg",
@@ -355,14 +411,10 @@
                                 "value": "return"
                             },
                             "targetId": "form1",
-                            "action": "cancel",
-                            "actionInfo": "home"
+                            "action": "updateData",
+                            "actionInfo": ""
                         }
                     }
-                },
-                "styles": {
-                    "width": "300px",
-                    "margin": "auto"
                 },
                 "params": {
                     "id": "shortDescription",
@@ -373,7 +425,7 @@
                         "isConditional": "false",
                         "showWhen": [
                             "username",
-                            "equals",
+                            "==",
                             "elie"
                         ]
                     }
@@ -384,7 +436,9 @@
             "form2": {
                 "tag": "form",
                 "children": {},
-                "styles": {},
+                "styles": {
+                    "default": {}
+                },
                 "params": {
                     "id": "form2",
                     "fields": {
@@ -392,15 +446,15 @@
                             "id": "shortDescription",
                             "name": "username",
                             "type": "text",
-                            "source": "none",
-                            "value": ""
+                            "source": "firebase",
+                            "value": "authEmail"
                         },
                         "password": {
                             "id": "shortDescription",
                             "name": "password",
                             "type": "password",
-                            "source": "none",
-                            "value": ""
+                            "source": "firebase",
+                            "value": "authPassword"
                         }
                     }
                 }
@@ -412,8 +466,10 @@
                         "tag": "button",
                         "children": {},
                         "styles": {
-                            "background-color": "red",
-                            "margin-left": "40px"
+                            "default": {
+                                "background-color": "red",
+                                "margin-left": "40px"
+                            }
                         },
                         "params": {
                             "id": "horizentalLayoutSignup",
@@ -430,8 +486,10 @@
                         "tag": "button",
                         "children": {},
                         "styles": {
-                            "background-color": "red",
-                            "margin-left": "150px"
+                            "default": {
+                                "background-color": "red",
+                                "margin-left": "150px"
+                            }
                         },
                         "params": {
                             "id": "sdgsdsafas",
@@ -447,8 +505,10 @@
                     }
                 },
                 "styles": {
-                    "width": "300px",
-                    "margin": "auto"
+                    "default": {
+                        "width": "300px",
+                        "margin": "auto"
+                    }
                 },
                 "params": {
                     "id": "shortDescription",
@@ -459,7 +519,7 @@
                         "isConditional": "false",
                         "showWhen": [
                             "username",
-                            "equals",
+                            "==",
                             "elie"
                         ]
                     }

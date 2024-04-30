@@ -5,16 +5,16 @@ import { useButton } from '../../AppContexts/ButtonContext';
 import SideBarParams from './SideBarParams';
 import Image from '../Image/Image';
 import Text from '../Text/Text';
+import { Actions } from './Actions';
 
 const SideBar = ({ params, layoutFireBase }) => {
     const [isOpen, setIsOpen] = useState(false);
     const { buttonState } = useButton();
     const toggleSidebar = () => setIsOpen(!isOpen);
     const sideBarParams = new SideBarParams(params["id"], params["title"], params["image"], params["buttons"])
-    console.log("sidebar", sideBarParams.image)
 
     useEffect(() => {
-        if (buttonState.id === "sidebar1") {
+        if (buttonState.id === sideBarParams.id && buttonState.action === Actions.toggle) {
             setIsOpen(previousState => !previousState);
         }
     }, [buttonState]);
@@ -22,7 +22,6 @@ const SideBar = ({ params, layoutFireBase }) => {
     const renderButtons = () => {
         return Object.entries(params.buttons).map(([key, button]) => {
             const spaces = [];
-            console.log("sidebar", button)
             for (let i = 0; i < button.newSectionSpace; i++) {
                 spaces.push(<div key={i} className={styles.singleSpace}></div>);
             }

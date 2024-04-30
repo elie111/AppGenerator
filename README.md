@@ -15,6 +15,7 @@
  * [Firestore database](https://firebase.google.com/docs/firestore/manage-data/add-data#before_you_begin)
  * [JSON Schema validation tool](https://www.liquid-technologies.com/online-json-schema-validator)
  * [icons](https://www.flaticon.com/)
+ * [FireStore conditional logic](https://firebase.google.com/docs/firestore/query-data/queries#limitations_3)
 
  ## To run the app generator:
  1) Clone project: git clone https://github.com/elie111/JenkinsHW.git

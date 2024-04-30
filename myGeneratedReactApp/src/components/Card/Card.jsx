@@ -1,14 +1,29 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styles from './Card.module.css';
 import ImageButton from '../ImageButton/ImageButton';
 import CardParams from './CardParams';
 import Image from '../Image/Image';
 import Text from '../Text/Text';
+import { useButton } from '../../AppContexts/ButtonContext';
+import { useRefresh } from '../../AppContexts/RefreshContext';
+import { Actions } from './Actions';
 
 const Card = ({ params, className, layoutFireBase }) => {
     const [isExpanded, setIsExpanded] = useState(false);
+    const { buttonState } = useButton();
+    const { triggerRefresh } = useRefresh();
     const cardParams = new CardParams(params["id"], params["cardId"], params["image"], params["shortDescription"], params["longDescription"]);
-
+    useEffect(() => {
+        if (buttonState.id === cardParams.id) {
+            switch (buttonState.action) {
+                case Actions.refresh:
+                    triggerRefresh()
+                    break;
+                default:
+                    break; // It's generally a good practice to have a default case in switch statements
+            }
+        }
+    }, [buttonState]);
     const toggleExpand = () => {
         setIsExpanded(!isExpanded);
     };

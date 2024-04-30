@@ -56,7 +56,6 @@ const Form = ({ params, stateManagers, layoutFireBase }) => {
     const renderFields = () => {
         return Object.entries(fields).map(([fieldName, fieldProps]) => (
             <div key={fieldName} className={styles.inputGroup}>
-                {description}
                 <label htmlFor={fieldName}>{fieldName.charAt(0).toUpperCase() + fieldName.slice(1).replace(/_/g, ' ')} </label>
                 <input
                     id={fieldName}
