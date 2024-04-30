@@ -340,7 +340,6 @@
                             "type": "password",
                             "source": "firebase",
                             "value": "authPassword"
-                        }
                         },
                         "userName": {
                             "id": "shortDescription",
@@ -348,7 +347,6 @@
                             "type": "text",
                             "source": "firebase",
                             "value": "userName"
-                        }
                         },
                         "location": {
                             "id": "shortDescription",

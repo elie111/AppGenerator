@@ -3,6 +3,7 @@ import Button from '../Button/Button';
 import { useButton } from '../../AppContexts/ButtonContext';
 import styles from './DropdownMenu.module.css';
 import DropDownMenuParams from './DropDownnMenuParams';
+import { Actions } from './Actions';
 
 const DropdownMenu = ({ params, className, layoutFireBase }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +13,7 @@ const DropdownMenu = ({ params, className, layoutFireBase }) => {
     const dropDownMenuParams = new DropDownMenuParams(params["id"], params["buttons"])
 
     useEffect(() => {
-        if (buttonState.id === "dropdown1" && buttonState.action === "toggle") {
+        if (buttonState.id === dropDownMenuParams.id && buttonState.action === Actions.toggle) {
             toggleDropdown();
         }
     }, [buttonState]);

@@ -5,6 +5,7 @@ import { useButton } from '../../AppContexts/ButtonContext';
 import SideBarParams from './SideBarParams';
 import Image from '../Image/Image';
 import Text from '../Text/Text';
+import { Actions } from './Actions';
 
 const SideBar = ({ params, layoutFireBase }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -13,7 +14,7 @@ const SideBar = ({ params, layoutFireBase }) => {
     const sideBarParams = new SideBarParams(params["id"], params["title"], params["image"], params["buttons"])
 
     useEffect(() => {
-        if (buttonState.id === "sidebar1") {
+        if (buttonState.id === sideBarParams.id && buttonState.action === Actions.toggle) {
             setIsOpen(previousState => !previousState);
         }
     }, [buttonState]);

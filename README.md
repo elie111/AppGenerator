@@ -164,9 +164,11 @@ Improved JSON schema to make cleared what we need to recieve, also started creat
 
 **Hours worked: 10h**
 
-* **28.4:**\
-In progress\
+* **28.4 - 29.4:**\
+Implemented loops and conditions for fetching firebase data, organized all buttons roles and implemented all missing roles, successfully fetched and sent data to firestore, specially from the form component which is our only way to update add data for now, so we can update meeting details and add new meetings.\
+Fixed small bugs and issues and cleaned the code.\
+Worked on creating 2 apps for my meeting with my supervisor, and prepared for the meeting in general.\ 
 
-**Hours worked: ~**\
+**Hours worked: 20h**
 
-**Total ammount of hours spent on the project: 130h**
+**Total ammount of hours spent on the project: 150h**

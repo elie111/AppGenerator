@@ -14,9 +14,10 @@ import SideBar from '../components/SideBar/SideBar';
 import Text from '../components/Text/Text';
 import { handleLogout } from '../Firebase/firebaseAuthService';
 import './App.css';
-import './GeneratedStyles.css';
+import './AppGeneratedStyles.css';
 import { auth } from '../Firebase/firebase';
 import { onAuthStateChanged } from 'firebase/auth';
+import {Actions} from './Actions'
 
 function App() {
   const [currentPage, setCurrentPage] = useState("login");
@@ -45,10 +46,10 @@ function App() {
   useEffect(() => {
     if (buttonState.id === "app") {
       switch (buttonState.action) {
-        case "page":
+        case Actions.page:
           setCurrentPage(buttonState.info);
           break;
-        case "logout":
+        case Actions.logout:
           handleLogout();
           setCurrentPage(buttonState.info);
           break;

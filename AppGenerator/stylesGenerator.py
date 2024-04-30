@@ -40,6 +40,6 @@ class CSSGenerator:
 
     @staticmethod
     def add_styled(css_content, new_path):
-        css_path = os.path.join(new_path, "src", "App/GeneratedStyles.css")
+        css_path = os.path.join(new_path, "src", "App/AppGeneratedStyles.css")
         with open(css_path, "w") as css_file:
             css_file.write(css_content)

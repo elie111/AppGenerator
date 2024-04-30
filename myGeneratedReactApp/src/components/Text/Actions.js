@@ -1,3 +1,3 @@
 export const Actions = {
-refresh: "refresh",
-}
+    refresh: "refresh",
+    }

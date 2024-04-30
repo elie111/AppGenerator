@@ -1,82 +1,17 @@
-.header1 {
-    background-color: blue;
-    color: white;
-}
-
-.sidebar1 {
-    position: relative;
-    z-index: 3;
-    background-color: gray;
-}
-
-.VerticalLayout1 {
-    background-color: #ffc566;
-    width: 100vw;
-    height: 100vh;
-}
-
-.horizentalLayout1 {
-    background-color: #d9b99b;
-    margin-top: 40px;
-    width: 100%;
-}
-
-.card1 {
-    background-color: #faf0e6;
-    margin-inline: 70px;
-    margin-block: 10px;
-}
-
-.horizentalLayout2 {
-    background-color: #d9b99b;
-    margin-top: 40px;
-    width: 100%;
-}
-
-.card1 {
-    background-color: #faf0e6;
-    margin-inline: 70px;
-    margin-block: 10px;
-}
-
+.header1 {background-color: blue; color: white;}
+.sidebar1 {position: relative; z-index: 3; background-color: gray;}
+.VerticalLayout1 {background-color: #ffc566; width: 100vw; height: 100vh;}
+.horizentalLayout1 {background-color: #d9b99b; margin-top: 40px; width: 100%;}
+.card1 {background-color: #faf0e6; margin-inline: 70px; margin-block: 10px;}
+.horizentalLayout2 {background-color: #d9b99b; margin-top: 40px; width: 100%;}
+.card1 {background-color: #faf0e6; margin-inline: 70px; margin-block: 10px;}
 .dropdown1 {}
-
 .form1 {}
-
-.horizentalLayoutLogin {
-    width: 300px;
-    margin: auto;
-}
-
-@media (max-width: 500px) {
-    .horizentalLayoutLogin {
-        width: 100vw;
-    }
-}
-
-.button6 {
-    background-color: red;
-    margin-left: 40px;
-}
-
-.button7 {
-    background-color: red;
-    margin-left: 150px;
-}
-
+.horizentalLayoutLogin {width: 300px; margin: auto;}
+@media (max-width: 500px) {.horizentalLayoutLogin {justify-content: center; width: 100vw;}}
+.button6 {background-color: red; margin-left: 40px;}
+.button7 {background-color: red; margin-left: 150px;}
 .form2 {}
-
-.horizentalLayoutSignup {
-    width: 300px;
-    margin: auto;
-}
-
-.button8 {
-    background-color: red;
-    margin-left: 40px;
-}
-
-.button9 {
-    background-color: red;
-    margin-left: 150px;
-}
+.horizentalLayoutSignup {width: 300px; margin: auto;}
+.button8 {background-color: red; margin-left: 40px;}
+.button9 {background-color: red; margin-left: 150px;}

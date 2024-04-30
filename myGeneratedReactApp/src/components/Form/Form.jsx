@@ -27,10 +27,12 @@ const Form = ({ params, stateManagers, layoutFireBase }) => {
         } else if (target === "authPassword") {
             stateManagers["passwordState"][1](value);
         } else {
-            setFieldValues(prevValues => ({
-                ...prevValues,
-                [target]: value
-            }));
+            setFieldValues(prevValues => {
+                return ({
+                    ...prevValues,
+                    [target]: value
+                })
+            });
         }
     }
 

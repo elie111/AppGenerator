@@ -7,7 +7,7 @@ async function addData(path, docId, newData) {
             await setDoc(doc(firestore, path, docId), newData);
         }
         else {
-            await addDoc(doc(firestore, path), newData);
+            await addDoc(collection(firestore, path), newData);
         }
         console.log("User ID saved to Firestore");
     } catch (error) {
