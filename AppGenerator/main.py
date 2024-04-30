@@ -18,6 +18,6 @@ def copy_project_directory(original_path, new_path):
     
 if __name__ == "__main__":
     original_project_path = "./BaseApp"
-    new_project_path = "./myGeneratedReactApp"
+    new_project_path = "./myGeneratedReactApp" # Must delete previous generated app or pass another new path
     json_file_path = "./AppBlueprints/AppBlueprints.json"
     generateApp(original_project_path, new_project_path, json_file_path)

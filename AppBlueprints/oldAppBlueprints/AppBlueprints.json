@@ -255,66 +255,6 @@
                             }
                         }
                     },
-                    "horizentalLayout3": {
-                        "tag": "horizentalLayout",
-                        "children": {
-                            "card1": {
-                                "tag": "card",
-                                "children": {},
-                                "styles": {
-                                    "default": {
-                                        "background-color": "#faf0e6",
-                                        "margin-inline": "70px",
-                                        "margin-block": "10px"
-                                    }
-                                },
-                                "params": {
-                                    "id": "card12",
-                                    "image": {
-                                        "id": "imagecard",
-                                        "source": "firebase",
-                                        "value": "profilePicture"
-                                    },
-                                    "cardId": {
-                                        "id": "cardId",
-                                        "source": "firebase",
-                                        "value": "userName"
-                                    },
-                                    "shortDescription": {
-                                        "id": "shortDescription",
-                                        "source": "firebase",
-                                        "value": "location"
-                                    },
-                                    "longDescription": {
-                                        "id": "longDescription",
-                                        "source": "firebase",
-                                        "value": "courseDescription"
-                                    }
-                                }
-                            }
-                        },
-                        "styles": {
-                            "default": {
-                                "background-color": "#d9b99b",
-                                "margin-top": "40px",
-                                "width": "100%"
-                            }
-                        },
-                        "params": {
-                            "id": "shortDescription",
-                            "collection": "users",
-                            "document": "2pXmQQzAjrf83OREczSzDB8lZQA3",
-                            "loop": "true",
-                            "condition": {
-                                "isConditional": "true",
-                                "showWhen": [
-                                    "userName",
-                                    "==",
-                                    "elie"
-                                ]
-                            }
-                        }
-                    },
                     "dropdown1": {
                         "tag": "dropdown",
                         "children": {},
@@ -322,7 +262,7 @@
                             "default": {}
                         },
                         "params": {
-                            "id": "dropdown1",
+                            "id": "shortDescription",
                             "buttons": {
                                 "settings": {
                                     "id": "ahh",

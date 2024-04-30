@@ -18,11 +18,12 @@
  * [FireStore conditional logic](https://firebase.google.com/docs/firestore/query-data/queries#limitations_3)
 
  ## To run the app generator:
- 1) Clone project: git clone https://github.com/elie111/JenkinsHW.git
- 2) Go to script direcotry: cd path-to-FinalProject/FinalProject
- 3) run the pytohn script: python AppGenerator/main.py
- 4) After the new app has been created go to the new react app directory: cd path-to-FinalProject/FinalProject/myGeneratedReactApp
- 5) run the app: npm start
+ 1) Clone project: git clone https://github.com/elie111/AppGenerator
+ 2) Go to project direcotry: cd path-to-FinalProject/FinalProject
+ 3) Make sure there is no folder in the project directory called myGeneratedReactApp, or instead inside main.py file set a new path to the Generated App folder
+ 4) Run the python script: python AppGenerator/main.py
+ 5) After the new app has been created go to the new react app directory: cd path-to-FinalProject/FinalProject/myGeneratedReactApp
+ 6) run the app: npm start
  
  ## Timeline
  * **12/3 - 20/3:** \
